@@ -38,3 +38,4 @@ ped:
 all: ped
 
 clean:
+	rm doc/*
