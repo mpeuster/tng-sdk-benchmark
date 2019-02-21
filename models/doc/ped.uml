@@ -1,0 +1,27 @@
+'Download plantuml from http://plantuml.sourceforge.net/ 
+'Generate png with java -jar plantuml.jar <file> 
+'Output in img/<module>.png 
+'If Java spits out memory error increase heap size with java -Xmx1024m  -jar plantuml.jar <file> 
+@startuml img/ped.png 
+hide empty fields 
+hide empty methods 
+hide <<case>> circle
+hide <<augment>> circle
+hide <<choice>> circle
+hide <<leafref>> stereotype
+hide <<leafref>> circle
+page 1x1 
+Title ped 
+note top of ped_ped : <b>Namespace: </b> https://github.com/sonata-nfv/tng-sdk-benchmark/models/ped \n<b>Prefix: </b> ped \n<b>Revision : </b> 2019-02-21 \n
+package "ped:ped" as ped_ped { 
+class "ped" as ped << (M, #33CCFF) module>> 
+class "ped-catalog" as  ped_I_ped_catalog <<container>> 
+ped *-- "1" ped_I_ped_catalog 
+ped_I_ped_catalog : schema-version : string   = v1.0 
+ped_I_ped_catalog : name : string  
+} 
+
+center footer
+ <size:20> UML Generated : 2019-02-21 16:02 </size>
+ endfooter 
+@enduml 
