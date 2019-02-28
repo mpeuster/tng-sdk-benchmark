@@ -1,4 +1,0 @@
-module: ped
-  +--rw ped-catalog
-     +--rw schema-version?   string
-     +--rw name?             string

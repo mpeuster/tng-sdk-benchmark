@@ -24,18 +24,27 @@
 # the Horizon 2020 and 5G-PPP programmes. The authors would like to
 # acknowledge the contributions of their colleagues of the SONATA
 # partner consortium (www.5gtango.eu).
+.DEFAULT_GOAL := all
 
 DOC_DIR="doc"
 
-ped:
+validate:
 	# generate doc
-	pyang ped.yang -f tree -o "$(DOC_DIR)/ped.tree"
-	pyang ped.yang -f jstree -o "$(DOC_DIR)/ped.html"
-	pyang ped.yang -f uml -o "$(DOC_DIR)/ped.uml"
+	pyang ietf-ped.yang -f tree -o "$(DOC_DIR)/ietf-ped.tree"
+	pyang ietf-ped.yang -f jstree -o "$(DOC_DIR)/ietf-ped.html"
+	pyang ietf-ped.yang -f uml -o "$(DOC_DIR)/ietf-ped.uml"
 	# finally validate
-	pyang ped.yang --ietf
+	pyang ietf-ped.yang --ietf
 
-all: ped
+bind:
+	# generate / compile python model
+	PYBINDPLUGIN=$(shell python -c 'import pyangbind; import os; print("{}/plugin".format(os.path.dirname(pyangbind.__file__)))')
+	pyang --plugindir $(PYBINDPLUGIN) -f pybind -o model.py ietf-ped.yang
+
+test:
+	python test.py
+
+all: validate bind
 
 clean:
 	rm doc/*

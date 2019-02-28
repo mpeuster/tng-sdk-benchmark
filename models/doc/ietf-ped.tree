@@ -1,0 +1,6 @@
+module: ietf-ped
+  +--rw ped
+     +--rw descriptor-schema?   string
+     +--rw vendor?              string
+     +--rw name?                string
+     +--rw version?             string

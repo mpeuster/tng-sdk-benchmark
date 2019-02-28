@@ -1,4 +1,4 @@
-<head><title> ped 
+<head><title> ietf-ped 
 </title>
 <style type="text/css" media="all">
 
@@ -153,9 +153,9 @@ function expandAllRows() {
 </a>
 <div class="app">
 <div style="background: #eee; border: dashed 1px #000;">
-<h1> Module: <font color=blue>ped</font>, Namespace:
-                    <font color=blue>https://github.com/sonata-nfv/tng-sdk-benchmark/models/ped</font>, Prefix:
-                    <font color=blue>ped</font></h1> 
+<h1> Module: <font color=blue>ietf-ped</font>, Namespace:
+                    <font color=blue>urn:ietf:params:xml:ns:yang:ietf-ped</font>, Prefix:
+                    <font color=blue>pe</font></h1> 
 
  <table width="100%">
 
@@ -181,7 +181,7 @@ function expandAllRows() {
                                   onclick="toggleRows(this);return false;"
                                   class="folder">&nbsp;
                                </a>
-                               <font color=blue>ped</font>
+                               <font color=blue>ietf-ped</font>
                             </div>
                          </td> 
 <td>module</td><td></td><td></td><td></td><td>
@@ -193,7 +193,7 @@ function expandAllRows() {
                                 onclick="toggleRows(this);return false"
                                 class="folder">&nbsp;
                              </a>
-                             <abbr title="Performance Experiment Descriptor (PED)">ped-catalog</abbr>
+                             <abbr title="Performance Experiment Descriptor (PED)">ped</abbr>
                           </div>
                        </td> 
 <td nowrap>container</td>
@@ -201,13 +201,13 @@ function expandAllRows() {
                     <td nowrap>config</td>
                     <td></td>
                     <td>current</td>
-                    <td nowrap>/ped:ped-catalog</td>
+                    <td nowrap>/pe:ped</td>
                     </tr> 
 <tr id="1-1-1" class="a">
                        <td nowrap>
                           <div id=9999 class=tier3>
                              <a class="leaf">&nbsp;</a>
-                             <abbr title="Schema version for the PED. Uses v1.0 if not specified."> <em> schema-version </em></abbr>
+                             <abbr title="Pointer to this data model."> <em> descriptor-schema </em></abbr>
                           </div>
                        </td>
                        <td>leaf</td>
@@ -216,8 +216,22 @@ function expandAllRows() {
                        <td nowrap>config</td>
                        <td>?</td>
                        <td>current</td>
-                       <td nowrap>/ped:ped-catalog/ped:schema-version</td</tr> 
+                       <td nowrap>/pe:ped/pe:descriptor-schema</td</tr> 
 <tr id="1-1-2" class="a">
+                       <td nowrap>
+                          <div id=9999 class=tier3>
+                             <a class="leaf">&nbsp;</a>
+                             <abbr title="Vendor of the described experiments."> <em> vendor </em></abbr>
+                          </div>
+                       </td>
+                       <td>leaf</td>
+                       <td nowrap><abbr title="string
+">string</abbr></td>
+                       <td nowrap>config</td>
+                       <td>?</td>
+                       <td>current</td>
+                       <td nowrap>/pe:ped/pe:vendor</td</tr> 
+<tr id="1-1-3" class="a">
                        <td nowrap>
                           <div id=9999 class=tier3>
                              <a class="leaf">&nbsp;</a>
@@ -230,7 +244,21 @@ function expandAllRows() {
                        <td nowrap>config</td>
                        <td>?</td>
                        <td>current</td>
-                       <td nowrap>/ped:ped-catalog/ped:name</td</tr> 
+                       <td nowrap>/pe:ped/pe:name</td</tr> 
+<tr id="1-1-4" class="a">
+                       <td nowrap>
+                          <div id=9999 class=tier3>
+                             <a class="leaf">&nbsp;</a>
+                             <abbr title="Version of the described experiments."> <em> version </em></abbr>
+                          </div>
+                       </td>
+                       <td>leaf</td>
+                       <td nowrap><abbr title="string
+">string</abbr></td>
+                       <td nowrap>config</td>
+                       <td>?</td>
+                       <td>current</td>
+                       <td nowrap>/pe:ped/pe:version</td</tr> 
 
 </table>
 </div>

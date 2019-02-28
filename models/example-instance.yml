@@ -1,0 +1,6 @@
+---
+ped:
+  descriptor-schema: "blaa"
+  vendor: "com.vendor"
+  name: "my_example"
+  version: "0.1"

@@ -26,30 +26,43 @@
 * acknowledge the contributions of their colleagues of the SONATA
 * partner consortium (www.5gtango.eu).
 */
-
-module ped
+module ietf-ped
 {
-  namespace "https://github.com/sonata-nfv/tng-sdk-benchmark/models/ped";
-  prefix "ped";
+  namespace "urn:ietf:params:xml:ns:yang:ietf-ped";
+  prefix "pe";
+  organization "";
+  contact "";
+  description "";
 
   revision 2019-02-21 {
     description
       "Initial revision. This YANG file defines
        the Performance Experiment Descriptor (PED)";
+    reference ""; 
   }
-  container ped-catalog {
+  container ped {
     description
       "Performance Experiment Descriptor (PED)";
 
-    leaf schema-version {
-      description "Schema version for the PED. Uses v1.0 if not specified.";
+    leaf descriptor-schema {
       type string;
-      default "v1.0";
+      default "https://github.com/mpeuster/tng-sdk-benchmark/raw/feature-73/models/ped.yang"; // update this
+      description "Pointer to this data model.";
+    }
+
+    leaf vendor {
+      type string;
+      description "Vendor of the described experiments.";
     }
 
     leaf name {
-      description "Name of the described experiments.";
       type string;
+      description "Name of the described experiments.";
+    }
+
+    leaf version {
+      type string;
+      description "Version of the described experiments.";
     }
   }
 }
