@@ -28,7 +28,6 @@
 import unittest
 import ietf_ped_model as generated_model
 import yaml
-import glob
 import os
 import pyangbind.lib.pybindJSON as pybindJSON
 
