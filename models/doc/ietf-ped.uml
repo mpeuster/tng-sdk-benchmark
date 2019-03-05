@@ -12,7 +12,7 @@ hide <<leafref>> stereotype
 hide <<leafref>> circle
 page 1x1 
 Title ietf-ped 
-note top of pe_ietf_ped : <b>Namespace: </b> urn:ietf:params:xml:ns:yang:ietf-ped \n<b>Prefix: </b> pe \n<b>Organization : </b>\n \n<b>Contact : </b>\n \n<b>Revision : </b> 2019-02-21 \n
+note top of pe_ietf_ped : <b>Namespace: </b> urn:ietf:params:xml:ns:yang:ietf-ped \n<b>Prefix: </b> pe \n<b>Organization : </b>\nPaderborn University \n<b>Contact : </b>\nManuel Peuster <manuel@peuster.de> \n<b>Revision : </b> 2019-02-21 \n
 package "pe:ietf-ped" as pe_ietf_ped { 
 class "ietf-ped" as ietf_ped << (M, #33CCFF) module>> 
 class "ped" as  ietf_ped_I_ped <<container>> 
@@ -21,9 +21,11 @@ ietf_ped_I_ped : descriptor-schema : string   = https://github.com/mpeuster/tng-
 ietf_ped_I_ped : vendor : string  
 ietf_ped_I_ped : name : string  
 ietf_ped_I_ped : version : string  
+ietf_ped_I_ped : author : string  
+ietf_ped_I_ped : description : string  
 } 
 
 center footer
- <size:20> UML Generated : 2019-02-28 22:37 </size>
+ <size:20> UML Generated : 2019-03-05 14:49 </size>
  endfooter 
 @enduml 

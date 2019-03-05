@@ -30,9 +30,9 @@ module ietf-ped
 {
   namespace "urn:ietf:params:xml:ns:yang:ietf-ped";
   prefix "pe";
-  organization "";
-  contact "";
-  description "";
+  organization "Paderborn University";
+  contact "Manuel Peuster <manuel@peuster.de>";
+  description "Performance Experiment Descriptor (PED) model.";
 
   revision 2019-02-21 {
     description
@@ -43,26 +43,30 @@ module ietf-ped
   container ped {
     description
       "Performance Experiment Descriptor (PED)";
-
     leaf descriptor-schema {
       type string;
       default "https://github.com/mpeuster/tng-sdk-benchmark/raw/feature-73/models/ped.yang"; // update this
       description "Pointer to this data model.";
     }
-
     leaf vendor {
       type string;
       description "Vendor of the described experiments.";
     }
-
     leaf name {
       type string;
       description "Name of the described experiments.";
     }
-
     leaf version {
       type string;
       description "Version of the described experiments.";
+    }
+    leaf author {
+      type string;
+      description "Author of the described experiments.";
+    }
+    leaf description {
+      type string;
+      description "Generic description text.";
     }
   }
 }

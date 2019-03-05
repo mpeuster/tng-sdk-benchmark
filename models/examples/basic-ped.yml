@@ -1,0 +1,10 @@
+---
+ped:
+  descriptor-schema: "https://github.com/sonata-nfv/tng-sdk-benchmark/blob/master/models/"
+  vendor: "com.vendor"
+  name: "my_example_ped"
+  version: "0.1"
+  author: "Manuel Peuster <manuel@peuster.de>"
+  description: "Example PED."
+
+  

@@ -26,7 +26,8 @@
 # partner consortium (www.5gtango.eu).
 .DEFAULT_GOAL := all
 
-DOC_DIR="doc"
+DOC_DIR := "doc"
+PYBINDPLUGIN := $(shell python -c 'import pyangbind; import os; print("{}/plugin".format(os.path.dirname(pyangbind.__file__)))')
 
 validate:
 	# generate doc
@@ -38,13 +39,13 @@ validate:
 
 bind:
 	# generate / compile python model
-	PYBINDPLUGIN=$(shell python -c 'import pyangbind; import os; print("{}/plugin".format(os.path.dirname(pyangbind.__file__)))')
-	pyang --plugindir $(PYBINDPLUGIN) -f pybind -o model.py ietf-ped.yang
+	pyang --plugindir $(PYBINDPLUGIN) -f pybind -o ietf_ped_model.py ietf-ped.yang
 
 test:
-	python test.py
+	# test the example ped files against the model
+	pytest -v
 
-all: validate bind
+all: validate bind test
 
 clean:
 	rm doc/*
