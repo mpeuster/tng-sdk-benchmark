@@ -37,7 +37,7 @@ validate:
 	# finally validate
 	pyang ietf-ped.yang --ietf
 
-bind:
+build:
 	# generate / compile python model
 	pyang --plugindir $(PYBINDPLUGIN) -f pybind -o ietf_ped_model.py ietf-ped.yang
 
@@ -45,7 +45,7 @@ test:
 	# test the example ped files against the model
 	pytest -v
 
-all: validate bind test
+all: validate build test
 
 clean:
 	rm doc/*
