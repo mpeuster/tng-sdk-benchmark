@@ -31,19 +31,19 @@ PYBINDPLUGIN := $(shell python -c 'import pyangbind; import os; print("{}/plugin
 
 validate:
 	# generate doc
-	pyang ietf-ped.yang -f tree -o "$(DOC_DIR)/ietf-ped.tree"
-	pyang ietf-ped.yang -f jstree -o "$(DOC_DIR)/ietf-ped.html"
-	pyang ietf-ped.yang -f uml -o "$(DOC_DIR)/ietf-ped.uml"
+	pyang ietf-ped-catalog.yang -f tree -o "$(DOC_DIR)/ietf-ped-catalog.tree"
+	pyang ietf-ped-catalog.yang -f jstree -o "$(DOC_DIR)/ietf-ped-catalog.html"
+	pyang ietf-ped-catalog.yang -f uml -o "$(DOC_DIR)/ietf-ped-catalog.uml"
 	# finally validate
-	pyang ietf-ped.yang --ietf
+	pyang ietf-ped-catalog.yang --ietf
 
 build:
 	# generate / compile python model
-	pyang --plugindir $(PYBINDPLUGIN) -f pybind -o ietf_ped_model.py ietf-ped.yang
+	pyang --plugindir $(PYBINDPLUGIN) -f pybind -o ietf_ped_model.py ietf-ped-catalog.yang
 
 test:
 	# test the example ped files against the model
-	pytest -v
+	pytest -s -v
 
 all: validate build test
 

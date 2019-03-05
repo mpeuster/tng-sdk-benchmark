@@ -1,4 +1,5 @@
-#  Copyright (c) 2019 Manuel Peuster, 5GTANGO, Paderborn University
+#  Copyright (c) 2019 Manuel Peuster <manuel@peuster.de
+#  Copyright (c) 2019 SONATA-NFV, 5GTANGO, Paderborn University
 # ALL RIGHTS RESERVED.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# Neither the name of the 5GTANGO, Paderborn University
+# Neither the name of the SONATA-NFV, 5GTANGO, Paderborn University
 # nor the names of its contributors may be used to endorse or promote
 # products derived from this software without specific prior written
 # permission.
@@ -32,7 +33,7 @@ import os
 import pyangbind.lib.pybindJSON as pybindJSON
 
 
-MODEL_NAME = "ietf_ped"
+MODEL_NAME = "ietf_ped_catalog"
 EXAMPLE_DIR = "examples/"
 
 
@@ -45,7 +46,8 @@ def check_against_model(yaml_path):
     """
     with open(yaml_path, "r") as f:
         ped_data = yaml.load(f)
-        ped_model = pybindJSON.loads(ped_data, generated_model, MODEL_NAME)
+        ped_model = pybindJSON.loads_ietf(
+            ped_data, generated_model, MODEL_NAME)
         #  print(ped_model.ped.name)  # example how to use model
         return ped_model
 
@@ -54,11 +56,11 @@ class TestStringMethods(unittest.TestCase):
 
     def test_example_peds_against_model(self):
         # collect all example PED files which should be checked against model
-        example_peds = list()
-        example_peds.extend(glob.glob(os.path.join(EXAMPLE_DIR, "*.yml")))
-        example_peds.extend(glob.glob(os.path.join(EXAMPLE_DIR, "*.yaml")))
+        example_peds = os.listdir(EXAMPLE_DIR)
         # check each PED file against the model
+        print("Validating: {} PED files.".format(len(example_peds)))
         for ep in example_peds:
-            self.assertIsNotNone(check_against_model(ep))
+            self.assertIsNotNone(
+                check_against_model(os.path.join(EXAMPLE_DIR, ep)))
             print("File: '{}' is valid against model '{}'."
                   .format(ep, MODEL_NAME))
