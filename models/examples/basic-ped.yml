@@ -43,7 +43,7 @@ ped-catalog:  # we need this construct to build an IETF 6087 4.9 compatible data
       experiments:
         - id: "first_experiment"
           repetitions: 25
-          time-limit: 30 # unit?
+          time-limit: 30
           probes:
             - id: "mp.output"
               container-image: "mpeuster/tng-bench-mp"
