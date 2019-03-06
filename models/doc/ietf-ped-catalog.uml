@@ -33,16 +33,29 @@ ietf_ped_catalog_I_probe_grouping : id : string
 ietf_ped_catalog_I_probe_grouping : container-image : string   {mandatory}
 ietf_ped_catalog_I_probe_grouping : connection-point-ref : string  
 ietf_ped_catalog_I_probe_grouping : address : string  
+class "node-command-parameter" as ietf_ped_catalog_I_node_command_parameter_grouping <<(G,Lime) grouping>> 
+ietf_ped_catalog_I_node_command_parameter_grouping : cmd_start : string  
+ietf_ped_catalog_I_node_command_parameter_grouping : cmd_stop : string  
+class "node-resource-parameter" as ietf_ped_catalog_I_node_resource_parameter_grouping <<(G,Lime) grouping>> 
+ietf_ped_catalog_I_node_resource_parameter_grouping : cpu_bw : string  
+ietf_ped_catalog_I_node_resource_parameter_grouping : cpu_core_set : string  
+ietf_ped_catalog_I_node_resource_parameter_grouping : mem_max : string  
+ietf_ped_catalog_I_node_resource_parameter_grouping : mem_swap_max : string  
+ietf_ped_catalog_I_node_resource_parameter_grouping : io_bw : string  
 class "experiment-node-parameter" as ietf_ped_catalog_I_experiment_node_parameter_grouping <<(G,Lime) grouping>> 
 ietf_ped_catalog_I_experiment_node_parameter_grouping : id : string  
 class "node-ref" as ietf_ped_catalog_I_experiment_node_parameter_I_node_ref <<choice>> 
 ietf_ped_catalog_I_experiment_node_parameter_grouping .. ietf_ped_catalog_I_experiment_node_parameter_I_node_ref : choice 
 class "vnf" as ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_case <<case>>
 ietf_ped_catalog_I_experiment_node_parameter_I_node_ref .. ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_case  : choice node-ref
-ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_case : vnf-ref : string  
+class "vnf-ref" as  ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_I_vnf_ref <<container>> 
+ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_case *-- "1" ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_I_vnf_ref 
+ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_I_vnf_ref : vendor-name-version-id-ref {uses} 
 class "probe" as ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_probe_case <<case>>
 ietf_ped_catalog_I_experiment_node_parameter_I_node_ref .. ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_probe_case  : choice node-ref
-ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_probe_case : probe-ref : string  
+ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_probe_case : probe-ref : leafref : ../../probes/id  
+ietf_ped_catalog_I_experiment_node_parameter_grouping : node-command-parameter {uses} 
+ietf_ped_catalog_I_experiment_node_parameter_grouping : node-resource-parameter {uses} 
 class "experiment" as ietf_ped_catalog_I_experiment_grouping <<(G,Lime) grouping>> 
 ietf_ped_catalog_I_experiment_grouping : id : string  
 ietf_ped_catalog_I_experiment_grouping : repetitions : uint64  
@@ -76,6 +89,9 @@ ietf_ped_catalog_I_ped_catalog_I_peds : ped {uses}
 
 ietf_ped_catalog_I_sut_ref_grouping --> ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : uses 
 ietf_ped_catalog_I_sut_ref_grouping --> ietf_ped_catalog_I_generic_description_grouping : uses 
+ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_I_vnf_ref --> ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : uses 
+ietf_ped_catalog_I_experiment_node_parameter_grouping --> ietf_ped_catalog_I_node_command_parameter_grouping : uses 
+ietf_ped_catalog_I_experiment_node_parameter_grouping --> ietf_ped_catalog_I_node_resource_parameter_grouping : uses 
 ietf_ped_catalog_I_experiment_I_probes --> ietf_ped_catalog_I_probe_grouping : uses 
 ietf_ped_catalog_I_experiment_I_parameters --> ietf_ped_catalog_I_experiment_node_parameter_grouping : uses 
 ietf_ped_catalog_I_ped_grouping --> ietf_ped_catalog_I_generic_description_grouping : uses 
@@ -83,6 +99,6 @@ ietf_ped_catalog_I_ped_I_targets --> ietf_ped_catalog_I_sut_ref_grouping : uses
 ietf_ped_catalog_I_ped_I_experiments --> ietf_ped_catalog_I_experiment_grouping : uses 
 ietf_ped_catalog_I_ped_catalog_I_peds --> ietf_ped_catalog_I_ped_grouping : uses 
 center footer
- <size:20> UML Generated : 2019-03-06 13:47 </size>
+ <size:20> UML Generated : 2019-03-06 19:38 </size>
  endfooter 
 @enduml 

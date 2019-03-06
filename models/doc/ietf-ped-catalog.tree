@@ -27,7 +27,17 @@ module: ietf-ped-catalog
            +--rw parameters* [id]
               +--rw id                 string
               +--rw (node-ref)
-                 +--:(vnf)
-                 |  +--rw vnf-ref?     string
-                 +--:(probe)
-                    +--rw probe-ref?   string
+              |  +--:(vnf)
+              |  |  +--rw vnf-ref
+              |  |     +--rw vendor-ref     string
+              |  |     +--rw name-ref       string
+              |  |     +--rw version-ref    string
+              |  +--:(probe)
+              |     +--rw probe-ref?   -> ../../probes/id
+              +--rw cmd_start?         string
+              +--rw cmd_stop?          string
+              +--rw cpu_bw?            string
+              +--rw cpu_core_set?      string
+              +--rw mem_max?           string
+              +--rw mem_swap_max?      string
+              +--rw io_bw?             string

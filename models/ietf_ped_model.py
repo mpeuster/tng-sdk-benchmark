@@ -40,12 +40,12 @@ class yc_targets_ietf_ped_catalog__ped_catalog_peds_targets(PybindBase):
     self._path_helper = False
 
     self._extmethods = False
+    self.__name_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="name-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__vendor_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vendor-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__description = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="description", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__version_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="version-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     self.__uri = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="uri", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__vendor_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vendor-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__name_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="name-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__version_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="version-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__description = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="description", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
     load = kwargs.pop("load", None)
     if args:
@@ -331,10 +331,10 @@ class yc_probes_ietf_ped_catalog__ped_catalog_peds_experiments_probes(PybindBase
     self._path_helper = False
 
     self._extmethods = False
-    self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__container_image = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="container-image", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__connection_point_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="connection-point-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     self.__address = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="address", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__connection_point_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="connection-point-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__container_image = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="container-image", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
     load = kwargs.pop("load", None)
     if args:
@@ -524,6 +524,175 @@ class yc_probes_ietf_ped_catalog__ped_catalog_peds_experiments_probes(PybindBase
   _pyangbind_elements = OrderedDict([('id', id), ('container_image', container_image), ('connection_point_ref', connection_point_ref), ('address', address), ])
 
 
+class yc_vnf_ref_ietf_ped_catalog__ped_catalog_peds_experiments_parameters_vnf_ref(PybindBase):
+  """
+  This class was auto-generated by the PythonClass plugin for PYANG
+  from YANG module ietf-ped-catalog - based on the path /ped-catalog/peds/experiments/parameters/vnf-ref. Each member element of
+  the container is represented as a class variable - with a specific
+  YANG type.
+
+  YANG Description: Reference to a VNF of the SUT.
+  """
+  __slots__ = ('_path_helper', '_extmethods', '__vendor_ref','__name_ref','__version_ref',)
+
+  _yang_name = 'vnf-ref'
+
+  _pybind_generated_by = 'container'
+
+  def __init__(self, *args, **kwargs):
+
+    self._path_helper = False
+
+    self._extmethods = False
+    self.__version_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="version-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__name_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="name-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__vendor_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vendor-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+
+    load = kwargs.pop("load", None)
+    if args:
+      if len(args) > 1:
+        raise TypeError("cannot create a YANG container with >1 argument")
+      all_attr = True
+      for e in self._pyangbind_elements:
+        if not hasattr(args[0], e):
+          all_attr = False
+          break
+      if not all_attr:
+        raise ValueError("Supplied object did not have the correct attributes")
+      for e in self._pyangbind_elements:
+        nobj = getattr(args[0], e)
+        if nobj._changed() is False:
+          continue
+        setmethod = getattr(self, "_set_%s" % e)
+        if load is None:
+          setmethod(getattr(args[0], e))
+        else:
+          setmethod(getattr(args[0], e), load=load)
+
+  def _path(self):
+    if hasattr(self, "_parent"):
+      return self._parent._path()+[self._yang_name]
+    else:
+      return ['ped-catalog', 'peds', 'experiments', 'parameters', 'vnf-ref']
+
+  def _get_vendor_ref(self):
+    """
+    Getter method for vendor_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/vnf_ref/vendor_ref (string)
+
+    YANG Description: Vendor part of the reference
+    """
+    return self.__vendor_ref
+      
+  def _set_vendor_ref(self, v, load=False):
+    """
+    Setter method for vendor_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/vnf_ref/vendor_ref (string)
+    If this variable is read-only (config: false) in the
+    source YANG file, then _set_vendor_ref is considered as a private
+    method. Backends looking to populate this variable should
+    do so via calling thisObj._set_vendor_ref() directly.
+
+    YANG Description: Vendor part of the reference
+    """
+    if hasattr(v, "_utype"):
+      v = v._utype(v)
+    try:
+      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="vendor-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    except (TypeError, ValueError):
+      raise ValueError({
+          'error-string': """vendor_ref must be of a type compatible with string""",
+          'defined-type': "string",
+          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vendor-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+        })
+
+    self.__vendor_ref = t
+    if hasattr(self, '_set'):
+      self._set()
+
+  def _unset_vendor_ref(self):
+    self.__vendor_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vendor-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+
+
+  def _get_name_ref(self):
+    """
+    Getter method for name_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/vnf_ref/name_ref (string)
+
+    YANG Description: Name part of the reference
+    """
+    return self.__name_ref
+      
+  def _set_name_ref(self, v, load=False):
+    """
+    Setter method for name_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/vnf_ref/name_ref (string)
+    If this variable is read-only (config: false) in the
+    source YANG file, then _set_name_ref is considered as a private
+    method. Backends looking to populate this variable should
+    do so via calling thisObj._set_name_ref() directly.
+
+    YANG Description: Name part of the reference
+    """
+    if hasattr(v, "_utype"):
+      v = v._utype(v)
+    try:
+      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="name-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    except (TypeError, ValueError):
+      raise ValueError({
+          'error-string': """name_ref must be of a type compatible with string""",
+          'defined-type': "string",
+          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="name-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+        })
+
+    self.__name_ref = t
+    if hasattr(self, '_set'):
+      self._set()
+
+  def _unset_name_ref(self):
+    self.__name_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="name-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+
+
+  def _get_version_ref(self):
+    """
+    Getter method for version_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/vnf_ref/version_ref (string)
+
+    YANG Description: Version part of the reference
+    """
+    return self.__version_ref
+      
+  def _set_version_ref(self, v, load=False):
+    """
+    Setter method for version_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/vnf_ref/version_ref (string)
+    If this variable is read-only (config: false) in the
+    source YANG file, then _set_version_ref is considered as a private
+    method. Backends looking to populate this variable should
+    do so via calling thisObj._set_version_ref() directly.
+
+    YANG Description: Version part of the reference
+    """
+    if hasattr(v, "_utype"):
+      v = v._utype(v)
+    try:
+      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="version-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    except (TypeError, ValueError):
+      raise ValueError({
+          'error-string': """version_ref must be of a type compatible with string""",
+          'defined-type': "string",
+          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="version-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+        })
+
+    self.__version_ref = t
+    if hasattr(self, '_set'):
+      self._set()
+
+  def _unset_version_ref(self):
+    self.__version_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="version-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+
+  vendor_ref = __builtin__.property(_get_vendor_ref, _set_vendor_ref)
+  name_ref = __builtin__.property(_get_name_ref, _set_name_ref)
+  version_ref = __builtin__.property(_get_version_ref, _set_version_ref)
+
+  __choices__ = {'node-ref': {'vnf': ['vendor_ref', 'name_ref', 'version_ref']}}
+  _pyangbind_elements = OrderedDict([('vendor_ref', vendor_ref), ('name_ref', name_ref), ('version_ref', version_ref), ])
+
+
 class yc_parameters_ietf_ped_catalog__ped_catalog_peds_experiments_parameters(PybindBase):
   """
   This class was auto-generated by the PythonClass plugin for PYANG
@@ -533,7 +702,7 @@ class yc_parameters_ietf_ped_catalog__ped_catalog_peds_experiments_parameters(Py
 
   YANG Description: Parameters (e.g. configurations) tested during an experiment
   """
-  __slots__ = ('_path_helper', '_extmethods', '__id','__vnf_ref','__probe_ref',)
+  __slots__ = ('_path_helper', '_extmethods', '__id','__vnf_ref','__probe_ref','__cmd_start','__cmd_stop','__cpu_bw','__cpu_core_set','__mem_max','__mem_swap_max','__io_bw',)
 
   _yang_name = 'parameters'
 
@@ -544,9 +713,16 @@ class yc_parameters_ietf_ped_catalog__ped_catalog_peds_experiments_parameters(Py
     self._path_helper = False
 
     self._extmethods = False
+    self.__probe_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="probe-ref", parent=self, choice=('node-ref', 'probe'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='leafref', is_config=True)
+    self.__io_bw = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="io_bw", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__cmd_stop = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="cmd_stop", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__cpu_core_set = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="cpu_core_set", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__vnf_ref = YANGDynClass(base=yc_vnf_ref_ietf_ped_catalog__ped_catalog_peds_experiments_parameters_vnf_ref, is_container='container', yang_name="vnf-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, extensions=None, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='container', is_config=True)
+    self.__cmd_start = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="cmd_start", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__vnf_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vnf-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__probe_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="probe-ref", parent=self, choice=('node-ref', 'probe'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__cpu_bw = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="cpu_bw", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__mem_max = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="mem_max", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__mem_swap_max = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="mem_swap_max", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
     load = kwargs.pop("load", None)
     if args:
@@ -619,27 +795,31 @@ class yc_parameters_ietf_ped_catalog__ped_catalog_peds_experiments_parameters(Py
 
   def _get_vnf_ref(self):
     """
-    Getter method for vnf_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/vnf_ref (string)
+    Getter method for vnf_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/vnf_ref (container)
+
+    YANG Description: Reference to a VNF of the SUT.
     """
     return self.__vnf_ref
       
   def _set_vnf_ref(self, v, load=False):
     """
-    Setter method for vnf_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/vnf_ref (string)
+    Setter method for vnf_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/vnf_ref (container)
     If this variable is read-only (config: false) in the
     source YANG file, then _set_vnf_ref is considered as a private
     method. Backends looking to populate this variable should
     do so via calling thisObj._set_vnf_ref() directly.
+
+    YANG Description: Reference to a VNF of the SUT.
     """
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="vnf-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=yc_vnf_ref_ietf_ped_catalog__ped_catalog_peds_experiments_parameters_vnf_ref, is_container='container', yang_name="vnf-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, extensions=None, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='container', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
-          'error-string': """vnf_ref must be of a type compatible with string""",
-          'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vnf-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'error-string': """vnf_ref must be of a type compatible with container""",
+          'defined-type': "container",
+          'generated-type': """YANGDynClass(base=yc_vnf_ref_ietf_ped_catalog__ped_catalog_peds_experiments_parameters_vnf_ref, is_container='container', yang_name="vnf-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, extensions=None, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='container', is_config=True)""",
         })
 
     self.__vnf_ref = t
@@ -647,32 +827,36 @@ class yc_parameters_ietf_ped_catalog__ped_catalog_peds_experiments_parameters(Py
       self._set()
 
   def _unset_vnf_ref(self):
-    self.__vnf_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vnf-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__vnf_ref = YANGDynClass(base=yc_vnf_ref_ietf_ped_catalog__ped_catalog_peds_experiments_parameters_vnf_ref, is_container='container', yang_name="vnf-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, extensions=None, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='container', is_config=True)
 
 
   def _get_probe_ref(self):
     """
-    Getter method for probe_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/probe_ref (string)
+    Getter method for probe_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/probe_ref (leafref)
+
+    YANG Description: Reference to a probe ID.
     """
     return self.__probe_ref
       
   def _set_probe_ref(self, v, load=False):
     """
-    Setter method for probe_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/probe_ref (string)
+    Setter method for probe_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/probe_ref (leafref)
     If this variable is read-only (config: false) in the
     source YANG file, then _set_probe_ref is considered as a private
     method. Backends looking to populate this variable should
     do so via calling thisObj._set_probe_ref() directly.
+
+    YANG Description: Reference to a probe ID.
     """
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="probe-ref", parent=self, choice=('node-ref', 'probe'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="probe-ref", parent=self, choice=('node-ref', 'probe'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='leafref', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
-          'error-string': """probe_ref must be of a type compatible with string""",
-          'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="probe-ref", parent=self, choice=('node-ref', 'probe'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'error-string': """probe_ref must be of a type compatible with leafref""",
+          'defined-type': "leafref",
+          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="probe-ref", parent=self, choice=('node-ref', 'probe'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='leafref', is_config=True)""",
         })
 
     self.__probe_ref = t
@@ -680,14 +864,280 @@ class yc_parameters_ietf_ped_catalog__ped_catalog_peds_experiments_parameters(Py
       self._set()
 
   def _unset_probe_ref(self):
-    self.__probe_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="probe-ref", parent=self, choice=('node-ref', 'probe'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__probe_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="probe-ref", parent=self, choice=('node-ref', 'probe'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='leafref', is_config=True)
+
+
+  def _get_cmd_start(self):
+    """
+    Getter method for cmd_start, mapped from YANG variable /ped_catalog/peds/experiments/parameters/cmd_start (string)
+
+    YANG Description: Start command
+    """
+    return self.__cmd_start
+      
+  def _set_cmd_start(self, v, load=False):
+    """
+    Setter method for cmd_start, mapped from YANG variable /ped_catalog/peds/experiments/parameters/cmd_start (string)
+    If this variable is read-only (config: false) in the
+    source YANG file, then _set_cmd_start is considered as a private
+    method. Backends looking to populate this variable should
+    do so via calling thisObj._set_cmd_start() directly.
+
+    YANG Description: Start command
+    """
+    if hasattr(v, "_utype"):
+      v = v._utype(v)
+    try:
+      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="cmd_start", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    except (TypeError, ValueError):
+      raise ValueError({
+          'error-string': """cmd_start must be of a type compatible with string""",
+          'defined-type': "string",
+          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="cmd_start", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+        })
+
+    self.__cmd_start = t
+    if hasattr(self, '_set'):
+      self._set()
+
+  def _unset_cmd_start(self):
+    self.__cmd_start = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="cmd_start", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+
+
+  def _get_cmd_stop(self):
+    """
+    Getter method for cmd_stop, mapped from YANG variable /ped_catalog/peds/experiments/parameters/cmd_stop (string)
+
+    YANG Description: Stop command
+    """
+    return self.__cmd_stop
+      
+  def _set_cmd_stop(self, v, load=False):
+    """
+    Setter method for cmd_stop, mapped from YANG variable /ped_catalog/peds/experiments/parameters/cmd_stop (string)
+    If this variable is read-only (config: false) in the
+    source YANG file, then _set_cmd_stop is considered as a private
+    method. Backends looking to populate this variable should
+    do so via calling thisObj._set_cmd_stop() directly.
+
+    YANG Description: Stop command
+    """
+    if hasattr(v, "_utype"):
+      v = v._utype(v)
+    try:
+      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="cmd_stop", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    except (TypeError, ValueError):
+      raise ValueError({
+          'error-string': """cmd_stop must be of a type compatible with string""",
+          'defined-type': "string",
+          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="cmd_stop", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+        })
+
+    self.__cmd_stop = t
+    if hasattr(self, '_set'):
+      self._set()
+
+  def _unset_cmd_stop(self):
+    self.__cmd_stop = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="cmd_stop", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+
+
+  def _get_cpu_bw(self):
+    """
+    Getter method for cpu_bw, mapped from YANG variable /ped_catalog/peds/experiments/parameters/cpu_bw (string)
+
+    YANG Description: CPU bandwidth limit
+    """
+    return self.__cpu_bw
+      
+  def _set_cpu_bw(self, v, load=False):
+    """
+    Setter method for cpu_bw, mapped from YANG variable /ped_catalog/peds/experiments/parameters/cpu_bw (string)
+    If this variable is read-only (config: false) in the
+    source YANG file, then _set_cpu_bw is considered as a private
+    method. Backends looking to populate this variable should
+    do so via calling thisObj._set_cpu_bw() directly.
+
+    YANG Description: CPU bandwidth limit
+    """
+    if hasattr(v, "_utype"):
+      v = v._utype(v)
+    try:
+      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="cpu_bw", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    except (TypeError, ValueError):
+      raise ValueError({
+          'error-string': """cpu_bw must be of a type compatible with string""",
+          'defined-type': "string",
+          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="cpu_bw", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+        })
+
+    self.__cpu_bw = t
+    if hasattr(self, '_set'):
+      self._set()
+
+  def _unset_cpu_bw(self):
+    self.__cpu_bw = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="cpu_bw", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+
+
+  def _get_cpu_core_set(self):
+    """
+    Getter method for cpu_core_set, mapped from YANG variable /ped_catalog/peds/experiments/parameters/cpu_core_set (string)
+
+    YANG Description: CPU core set
+    """
+    return self.__cpu_core_set
+      
+  def _set_cpu_core_set(self, v, load=False):
+    """
+    Setter method for cpu_core_set, mapped from YANG variable /ped_catalog/peds/experiments/parameters/cpu_core_set (string)
+    If this variable is read-only (config: false) in the
+    source YANG file, then _set_cpu_core_set is considered as a private
+    method. Backends looking to populate this variable should
+    do so via calling thisObj._set_cpu_core_set() directly.
+
+    YANG Description: CPU core set
+    """
+    if hasattr(v, "_utype"):
+      v = v._utype(v)
+    try:
+      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="cpu_core_set", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    except (TypeError, ValueError):
+      raise ValueError({
+          'error-string': """cpu_core_set must be of a type compatible with string""",
+          'defined-type': "string",
+          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="cpu_core_set", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+        })
+
+    self.__cpu_core_set = t
+    if hasattr(self, '_set'):
+      self._set()
+
+  def _unset_cpu_core_set(self):
+    self.__cpu_core_set = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="cpu_core_set", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+
+
+  def _get_mem_max(self):
+    """
+    Getter method for mem_max, mapped from YANG variable /ped_catalog/peds/experiments/parameters/mem_max (string)
+
+    YANG Description: Memory limit
+    """
+    return self.__mem_max
+      
+  def _set_mem_max(self, v, load=False):
+    """
+    Setter method for mem_max, mapped from YANG variable /ped_catalog/peds/experiments/parameters/mem_max (string)
+    If this variable is read-only (config: false) in the
+    source YANG file, then _set_mem_max is considered as a private
+    method. Backends looking to populate this variable should
+    do so via calling thisObj._set_mem_max() directly.
+
+    YANG Description: Memory limit
+    """
+    if hasattr(v, "_utype"):
+      v = v._utype(v)
+    try:
+      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="mem_max", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    except (TypeError, ValueError):
+      raise ValueError({
+          'error-string': """mem_max must be of a type compatible with string""",
+          'defined-type': "string",
+          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="mem_max", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+        })
+
+    self.__mem_max = t
+    if hasattr(self, '_set'):
+      self._set()
+
+  def _unset_mem_max(self):
+    self.__mem_max = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="mem_max", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+
+
+  def _get_mem_swap_max(self):
+    """
+    Getter method for mem_swap_max, mapped from YANG variable /ped_catalog/peds/experiments/parameters/mem_swap_max (string)
+
+    YANG Description: Memory swap limit
+    """
+    return self.__mem_swap_max
+      
+  def _set_mem_swap_max(self, v, load=False):
+    """
+    Setter method for mem_swap_max, mapped from YANG variable /ped_catalog/peds/experiments/parameters/mem_swap_max (string)
+    If this variable is read-only (config: false) in the
+    source YANG file, then _set_mem_swap_max is considered as a private
+    method. Backends looking to populate this variable should
+    do so via calling thisObj._set_mem_swap_max() directly.
+
+    YANG Description: Memory swap limit
+    """
+    if hasattr(v, "_utype"):
+      v = v._utype(v)
+    try:
+      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="mem_swap_max", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    except (TypeError, ValueError):
+      raise ValueError({
+          'error-string': """mem_swap_max must be of a type compatible with string""",
+          'defined-type': "string",
+          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="mem_swap_max", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+        })
+
+    self.__mem_swap_max = t
+    if hasattr(self, '_set'):
+      self._set()
+
+  def _unset_mem_swap_max(self):
+    self.__mem_swap_max = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="mem_swap_max", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+
+
+  def _get_io_bw(self):
+    """
+    Getter method for io_bw, mapped from YANG variable /ped_catalog/peds/experiments/parameters/io_bw (string)
+
+    YANG Description: IO bandwidth limit
+    """
+    return self.__io_bw
+      
+  def _set_io_bw(self, v, load=False):
+    """
+    Setter method for io_bw, mapped from YANG variable /ped_catalog/peds/experiments/parameters/io_bw (string)
+    If this variable is read-only (config: false) in the
+    source YANG file, then _set_io_bw is considered as a private
+    method. Backends looking to populate this variable should
+    do so via calling thisObj._set_io_bw() directly.
+
+    YANG Description: IO bandwidth limit
+    """
+    if hasattr(v, "_utype"):
+      v = v._utype(v)
+    try:
+      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="io_bw", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    except (TypeError, ValueError):
+      raise ValueError({
+          'error-string': """io_bw must be of a type compatible with string""",
+          'defined-type': "string",
+          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="io_bw", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+        })
+
+    self.__io_bw = t
+    if hasattr(self, '_set'):
+      self._set()
+
+  def _unset_io_bw(self):
+    self.__io_bw = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="io_bw", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
   id = __builtin__.property(_get_id, _set_id)
   vnf_ref = __builtin__.property(_get_vnf_ref, _set_vnf_ref)
   probe_ref = __builtin__.property(_get_probe_ref, _set_probe_ref)
+  cmd_start = __builtin__.property(_get_cmd_start, _set_cmd_start)
+  cmd_stop = __builtin__.property(_get_cmd_stop, _set_cmd_stop)
+  cpu_bw = __builtin__.property(_get_cpu_bw, _set_cpu_bw)
+  cpu_core_set = __builtin__.property(_get_cpu_core_set, _set_cpu_core_set)
+  mem_max = __builtin__.property(_get_mem_max, _set_mem_max)
+  mem_swap_max = __builtin__.property(_get_mem_swap_max, _set_mem_swap_max)
+  io_bw = __builtin__.property(_get_io_bw, _set_io_bw)
 
   __choices__ = {'node-ref': {'vnf': ['vnf_ref'], 'probe': ['probe_ref']}}
-  _pyangbind_elements = OrderedDict([('id', id), ('vnf_ref', vnf_ref), ('probe_ref', probe_ref), ])
+  _pyangbind_elements = OrderedDict([('id', id), ('vnf_ref', vnf_ref), ('probe_ref', probe_ref), ('cmd_start', cmd_start), ('cmd_stop', cmd_stop), ('cpu_bw', cpu_bw), ('cpu_core_set', cpu_core_set), ('mem_max', mem_max), ('mem_swap_max', mem_swap_max), ('io_bw', io_bw), ])
 
 
 class yc_experiments_ietf_ped_catalog__ped_catalog_peds_experiments(PybindBase):
@@ -711,10 +1161,10 @@ class yc_experiments_ietf_ped_catalog__ped_catalog_peds_experiments(PybindBase):
 
     self._extmethods = False
     self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__repetitions = YANGDynClass(base=RestrictedClassType(base_type=long, restriction_dict={'range':  ['0..18446744073709551615']}, int_size=64), is_leaf=True, yang_name="repetitions", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='uint64', is_config=True)
     self.__time_limit = YANGDynClass(base=RestrictedClassType(base_type=long, restriction_dict={'range':  ['0..18446744073709551615']}, int_size=64), default=RestrictedClassType(base_type=long, restriction_dict={'range':  ['0..18446744073709551615']}, int_size=64)(0), is_leaf=True, yang_name="time-limit", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='time-in-seconds', is_config=True)
-    self.__probes = YANGDynClass(base=YANGListType("id",yc_probes_ietf_ped_catalog__ped_catalog_peds_experiments_probes, yang_name="probes", parent=self, is_container='list', user_ordered=False, path_helper=self._path_helper, yang_keys='id', extensions=None), is_container='list', yang_name="probes", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, extensions=None, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='list', is_config=True)
     self.__parameters = YANGDynClass(base=YANGListType("id",yc_parameters_ietf_ped_catalog__ped_catalog_peds_experiments_parameters, yang_name="parameters", parent=self, is_container='list', user_ordered=False, path_helper=self._path_helper, yang_keys='id', extensions=None), is_container='list', yang_name="parameters", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, extensions=None, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='list', is_config=True)
+    self.__probes = YANGDynClass(base=YANGListType("id",yc_probes_ietf_ped_catalog__ped_catalog_peds_experiments_probes, yang_name="probes", parent=self, is_container='list', user_ordered=False, path_helper=self._path_helper, yang_keys='id', extensions=None), is_container='list', yang_name="probes", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, extensions=None, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='list', is_config=True)
+    self.__repetitions = YANGDynClass(base=RestrictedClassType(base_type=long, restriction_dict={'range':  ['0..18446744073709551615']}, int_size=64), is_leaf=True, yang_name="repetitions", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='uint64', is_config=True)
 
     load = kwargs.pop("load", None)
     if args:
@@ -962,14 +1412,14 @@ class yc_peds_ietf_ped_catalog__ped_catalog_peds(PybindBase):
     self._path_helper = False
 
     self._extmethods = False
-    self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__descriptor_version = YANGDynClass(base=RestrictedPrecisionDecimalType(precision=1), default=Decimal(1.0), is_leaf=True, yang_name="descriptor-version", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='decimal64', is_config=True)
-    self.__vendor = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vendor", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__name = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="name", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     self.__version = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="version", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__description = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="description", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__author = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="author", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__descriptor_version = YANGDynClass(base=RestrictedPrecisionDecimalType(precision=1), default=Decimal(1.0), is_leaf=True, yang_name="descriptor-version", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='decimal64', is_config=True)
     self.__targets = YANGDynClass(base=YANGListType("id",yc_targets_ietf_ped_catalog__ped_catalog_peds_targets, yang_name="targets", parent=self, is_container='list', user_ordered=False, path_helper=self._path_helper, yang_keys='id', extensions=None), is_container='list', yang_name="targets", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, extensions=None, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='list', is_config=True)
+    self.__author = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="author", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__description = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="description", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__name = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="name", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__vendor = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vendor", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     self.__experiments = YANGDynClass(base=YANGListType("id",yc_experiments_ietf_ped_catalog__ped_catalog_peds_experiments, yang_name="experiments", parent=self, is_container='list', user_ordered=False, path_helper=self._path_helper, yang_keys='id', extensions=None), is_container='list', yang_name="experiments", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, extensions=None, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='list', is_config=True)
 
     load = kwargs.pop("load", None)

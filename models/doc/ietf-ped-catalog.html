@@ -618,19 +618,64 @@ uint64
                     <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters</td>
                     </tr> 
 <tr id="1-1-1-9-11-6-1-1" class="a">
+                       <td nowrap id="p4000">
+                          <div id="p5000" class="tier8">
+                             <a href="#" id="p6000"
+                                onclick="toggleRows(this);return false"
+                                class="folder">&nbsp;
+                             </a>
+                             <abbr title="Reference to a VNF of the SUT.">vnf-ref</abbr>
+                          </div>
+                       </td> 
+<td nowrap>container</td>
+                    <td nowrap></td>
+                    <td nowrap>config</td>
+                    <td></td>
+                    <td>current</td>
+                    <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:vnf-ref</td>
+                    </tr> 
+<tr id="1-1-1-9-11-6-1-1-1" class="a">
                        <td nowrap>
-                          <div id=9999 class=tier8>
+                          <div id=9999 class=tier9>
                              <a class="leaf">&nbsp;</a>
-                             <abbr title=""> <em> vnf-ref </em></abbr>
+                             <abbr title="Vendor part of the reference">  vendor-ref </abbr>
                           </div>
                        </td>
                        <td>leaf</td>
                        <td nowrap><abbr title="string
 ">string</abbr></td>
                        <td nowrap>config</td>
-                       <td>?</td>
+                       <td></td>
                        <td>current</td>
-                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:vnf-ref</td</tr> 
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:vnf-ref/pe:vendor-ref</td</tr> 
+<tr id="1-1-1-9-11-6-1-1-2" class="a">
+                       <td nowrap>
+                          <div id=9999 class=tier9>
+                             <a class="leaf">&nbsp;</a>
+                             <abbr title="Name part of the reference">  name-ref </abbr>
+                          </div>
+                       </td>
+                       <td>leaf</td>
+                       <td nowrap><abbr title="string
+">string</abbr></td>
+                       <td nowrap>config</td>
+                       <td></td>
+                       <td>current</td>
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:vnf-ref/pe:name-ref</td</tr> 
+<tr id="1-1-1-9-11-6-1-1-3" class="a">
+                       <td nowrap>
+                          <div id=9999 class=tier9>
+                             <a class="leaf">&nbsp;</a>
+                             <abbr title="Version part of the reference">  version-ref </abbr>
+                          </div>
+                       </td>
+                       <td>leaf</td>
+                       <td nowrap><abbr title="string
+">string</abbr></td>
+                       <td nowrap>config</td>
+                       <td></td>
+                       <td>current</td>
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:vnf-ref/pe:version-ref</td</tr> 
 <tr id="1-1-1-9-11-6-2" class="a">
                        <td nowrap id="p4000">
                           <div id="p5000" class="tier7">
@@ -652,7 +697,21 @@ uint64
                        <td nowrap>
                           <div id=9999 class=tier8>
                              <a class="leaf">&nbsp;</a>
-                             <abbr title=""> <em> probe-ref </em></abbr>
+                             <abbr title="Reference to a probe ID."> <em> probe-ref </em></abbr>
+                          </div>
+                       </td>
+                       <td>leaf</td>
+                       <td nowrap><abbr title="leafref
+ : ../../probes/id">leafref</abbr></td>
+                       <td nowrap>config</td>
+                       <td>?</td>
+                       <td>current</td>
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:probe-ref</td</tr> 
+<tr id="1-1-1-9-11-7" class="a">
+                       <td nowrap>
+                          <div id=9999 class=tier6>
+                             <a class="leaf">&nbsp;</a>
+                             <abbr title="Start command"> <em> cmd_start </em></abbr>
                           </div>
                        </td>
                        <td>leaf</td>
@@ -661,7 +720,91 @@ uint64
                        <td nowrap>config</td>
                        <td>?</td>
                        <td>current</td>
-                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:probe-ref</td</tr> 
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:cmd_start</td</tr> 
+<tr id="1-1-1-9-11-8" class="a">
+                       <td nowrap>
+                          <div id=9999 class=tier6>
+                             <a class="leaf">&nbsp;</a>
+                             <abbr title="Stop command"> <em> cmd_stop </em></abbr>
+                          </div>
+                       </td>
+                       <td>leaf</td>
+                       <td nowrap><abbr title="string
+">string</abbr></td>
+                       <td nowrap>config</td>
+                       <td>?</td>
+                       <td>current</td>
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:cmd_stop</td</tr> 
+<tr id="1-1-1-9-11-9" class="a">
+                       <td nowrap>
+                          <div id=9999 class=tier6>
+                             <a class="leaf">&nbsp;</a>
+                             <abbr title="CPU bandwidth limit"> <em> cpu_bw </em></abbr>
+                          </div>
+                       </td>
+                       <td>leaf</td>
+                       <td nowrap><abbr title="string
+">string</abbr></td>
+                       <td nowrap>config</td>
+                       <td>?</td>
+                       <td>current</td>
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:cpu_bw</td</tr> 
+<tr id="1-1-1-9-11-10" class="a">
+                       <td nowrap>
+                          <div id=9999 class=tier6>
+                             <a class="leaf">&nbsp;</a>
+                             <abbr title="CPU core set"> <em> cpu_core_set </em></abbr>
+                          </div>
+                       </td>
+                       <td>leaf</td>
+                       <td nowrap><abbr title="string
+">string</abbr></td>
+                       <td nowrap>config</td>
+                       <td>?</td>
+                       <td>current</td>
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:cpu_core_set</td</tr> 
+<tr id="1-1-1-9-11-11" class="a">
+                       <td nowrap>
+                          <div id=9999 class=tier6>
+                             <a class="leaf">&nbsp;</a>
+                             <abbr title="Memory limit"> <em> mem_max </em></abbr>
+                          </div>
+                       </td>
+                       <td>leaf</td>
+                       <td nowrap><abbr title="string
+">string</abbr></td>
+                       <td nowrap>config</td>
+                       <td>?</td>
+                       <td>current</td>
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:mem_max</td</tr> 
+<tr id="1-1-1-9-11-12" class="a">
+                       <td nowrap>
+                          <div id=9999 class=tier6>
+                             <a class="leaf">&nbsp;</a>
+                             <abbr title="Memory swap limit"> <em> mem_swap_max </em></abbr>
+                          </div>
+                       </td>
+                       <td>leaf</td>
+                       <td nowrap><abbr title="string
+">string</abbr></td>
+                       <td nowrap>config</td>
+                       <td>?</td>
+                       <td>current</td>
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:mem_swap_max</td</tr> 
+<tr id="1-1-1-9-11-13" class="a">
+                       <td nowrap>
+                          <div id=9999 class=tier6>
+                             <a class="leaf">&nbsp;</a>
+                             <abbr title="IO bandwidth limit"> <em> io_bw </em></abbr>
+                          </div>
+                       </td>
+                       <td>leaf</td>
+                       <td nowrap><abbr title="string
+">string</abbr></td>
+                       <td nowrap>config</td>
+                       <td>?</td>
+                       <td>current</td>
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:io_bw</td</tr> 
 
 </table>
 </div>
