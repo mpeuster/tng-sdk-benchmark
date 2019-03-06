@@ -25,4 +25,9 @@ module: ietf-ped-catalog
            |  +--rw connection-point-ref?   string
            |  +--rw address?                string
            +--rw parameters* [id]
-              +--rw id    string
+              +--rw id                 string
+              +--rw (node-ref)
+                 +--:(vnf)
+                 |  +--rw vnf-ref?     string
+                 +--:(probe)
+                    +--rw probe-ref?   string

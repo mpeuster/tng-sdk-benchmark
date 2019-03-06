@@ -116,8 +116,24 @@ module ietf-ped-catalog
       type string;
       description "Identifier";
     }
-    // either a reference to a mp leaf or a vendor-name-version-ref
-
+    choice node-ref {
+      case vnf {
+          leaf vnf-ref {
+              type string;
+              description "";
+              //TODO continue
+          }
+      }
+      case probe {
+          leaf probe-ref {
+              type string;
+              description "";
+              //TODO continue
+          }
+      }
+      mandatory true;
+      description "Either reference a VNF (vendor.name.version) or a probe (leafref)";
+    }
   }
 
   grouping experiment {

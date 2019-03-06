@@ -533,7 +533,7 @@ class yc_parameters_ietf_ped_catalog__ped_catalog_peds_experiments_parameters(Py
 
   YANG Description: Parameters (e.g. configurations) tested during an experiment
   """
-  __slots__ = ('_path_helper', '_extmethods', '__id',)
+  __slots__ = ('_path_helper', '_extmethods', '__id','__vnf_ref','__probe_ref',)
 
   _yang_name = 'parameters'
 
@@ -545,6 +545,8 @@ class yc_parameters_ietf_ped_catalog__ped_catalog_peds_experiments_parameters(Py
 
     self._extmethods = False
     self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__vnf_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vnf-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__probe_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="probe-ref", parent=self, choice=('node-ref', 'probe'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
     load = kwargs.pop("load", None)
     if args:
@@ -614,10 +616,78 @@ class yc_parameters_ietf_ped_catalog__ped_catalog_peds_experiments_parameters(Py
   def _unset_id(self):
     self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
+
+  def _get_vnf_ref(self):
+    """
+    Getter method for vnf_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/vnf_ref (string)
+    """
+    return self.__vnf_ref
+      
+  def _set_vnf_ref(self, v, load=False):
+    """
+    Setter method for vnf_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/vnf_ref (string)
+    If this variable is read-only (config: false) in the
+    source YANG file, then _set_vnf_ref is considered as a private
+    method. Backends looking to populate this variable should
+    do so via calling thisObj._set_vnf_ref() directly.
+    """
+    if hasattr(v, "_utype"):
+      v = v._utype(v)
+    try:
+      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="vnf-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    except (TypeError, ValueError):
+      raise ValueError({
+          'error-string': """vnf_ref must be of a type compatible with string""",
+          'defined-type': "string",
+          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vnf-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+        })
+
+    self.__vnf_ref = t
+    if hasattr(self, '_set'):
+      self._set()
+
+  def _unset_vnf_ref(self):
+    self.__vnf_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vnf-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+
+
+  def _get_probe_ref(self):
+    """
+    Getter method for probe_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/probe_ref (string)
+    """
+    return self.__probe_ref
+      
+  def _set_probe_ref(self, v, load=False):
+    """
+    Setter method for probe_ref, mapped from YANG variable /ped_catalog/peds/experiments/parameters/probe_ref (string)
+    If this variable is read-only (config: false) in the
+    source YANG file, then _set_probe_ref is considered as a private
+    method. Backends looking to populate this variable should
+    do so via calling thisObj._set_probe_ref() directly.
+    """
+    if hasattr(v, "_utype"):
+      v = v._utype(v)
+    try:
+      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="probe-ref", parent=self, choice=('node-ref', 'probe'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    except (TypeError, ValueError):
+      raise ValueError({
+          'error-string': """probe_ref must be of a type compatible with string""",
+          'defined-type': "string",
+          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="probe-ref", parent=self, choice=('node-ref', 'probe'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+        })
+
+    self.__probe_ref = t
+    if hasattr(self, '_set'):
+      self._set()
+
+  def _unset_probe_ref(self):
+    self.__probe_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="probe-ref", parent=self, choice=('node-ref', 'probe'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+
   id = __builtin__.property(_get_id, _set_id)
+  vnf_ref = __builtin__.property(_get_vnf_ref, _set_vnf_ref)
+  probe_ref = __builtin__.property(_get_probe_ref, _set_probe_ref)
 
-
-  _pyangbind_elements = OrderedDict([('id', id), ])
+  __choices__ = {'node-ref': {'vnf': ['vnf_ref'], 'probe': ['probe_ref']}}
+  _pyangbind_elements = OrderedDict([('id', id), ('vnf_ref', vnf_ref), ('probe_ref', probe_ref), ])
 
 
 class yc_experiments_ietf_ped_catalog__ped_catalog_peds_experiments(PybindBase):

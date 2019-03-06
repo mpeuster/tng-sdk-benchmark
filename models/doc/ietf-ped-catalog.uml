@@ -35,6 +35,14 @@ ietf_ped_catalog_I_probe_grouping : connection-point-ref : string
 ietf_ped_catalog_I_probe_grouping : address : string  
 class "experiment-node-parameter" as ietf_ped_catalog_I_experiment_node_parameter_grouping <<(G,Lime) grouping>> 
 ietf_ped_catalog_I_experiment_node_parameter_grouping : id : string  
+class "node-ref" as ietf_ped_catalog_I_experiment_node_parameter_I_node_ref <<choice>> 
+ietf_ped_catalog_I_experiment_node_parameter_grouping .. ietf_ped_catalog_I_experiment_node_parameter_I_node_ref : choice 
+class "vnf" as ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_case <<case>>
+ietf_ped_catalog_I_experiment_node_parameter_I_node_ref .. ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_case  : choice node-ref
+ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_case : vnf-ref : string  
+class "probe" as ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_probe_case <<case>>
+ietf_ped_catalog_I_experiment_node_parameter_I_node_ref .. ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_probe_case  : choice node-ref
+ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_probe_case : probe-ref : string  
 class "experiment" as ietf_ped_catalog_I_experiment_grouping <<(G,Lime) grouping>> 
 ietf_ped_catalog_I_experiment_grouping : id : string  
 ietf_ped_catalog_I_experiment_grouping : repetitions : uint64  
@@ -75,6 +83,6 @@ ietf_ped_catalog_I_ped_I_targets --> ietf_ped_catalog_I_sut_ref_grouping : uses
 ietf_ped_catalog_I_ped_I_experiments --> ietf_ped_catalog_I_experiment_grouping : uses 
 ietf_ped_catalog_I_ped_catalog_I_peds --> ietf_ped_catalog_I_ped_grouping : uses 
 center footer
- <size:20> UML Generated : 2019-03-06 13:32 </size>
+ <size:20> UML Generated : 2019-03-06 13:47 </size>
  endfooter 
 @enduml 
