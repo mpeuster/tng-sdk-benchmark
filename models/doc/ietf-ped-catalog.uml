@@ -1,0 +1,80 @@
+'Download plantuml from http://plantuml.sourceforge.net/ 
+'Generate png with java -jar plantuml.jar <file> 
+'Output in img/<module>.png 
+'If Java spits out memory error increase heap size with java -Xmx1024m  -jar plantuml.jar <file> 
+@startuml img/ietf-ped-catalog.png 
+hide empty fields 
+hide empty methods 
+hide <<case>> circle
+hide <<augment>> circle
+hide <<choice>> circle
+hide <<leafref>> stereotype
+hide <<leafref>> circle
+page 1x1 
+Title ietf-ped-catalog 
+note top of pe_ietf_ped_catalog : <b>Namespace: </b> urn:ietf:params:xml:ns:yang:ietf-ped-catalog \n<b>Prefix: </b> pe \n<b>Organization : </b>\nPaderborn University \n<b>Contact : </b>\nManuel Peuster <manuel@peuster.de> \n<b>Revision : </b> 2019-02-21 \n
+package "pe:ietf-ped-catalog" as pe_ietf_ped_catalog { 
+class "ietf-ped-catalog" as ietf_ped_catalog << (M, #33CCFF) module>> 
+class "time-in-seconds" as time_in_seconds << (T, YellowGreen) typedef>>
+time_in_seconds : uint64
+class "vendor-name-version-id-ref" as ietf_ped_catalog_I_vendor_name_version_id_ref_grouping <<(G,Lime) grouping>> 
+ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : vendor-ref : string   {mandatory}
+ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : name-ref : string   {mandatory}
+ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : version-ref : string   {mandatory}
+class "generic-description" as ietf_ped_catalog_I_generic_description_grouping <<(G,Lime) grouping>> 
+ietf_ped_catalog_I_generic_description_grouping : description : string  
+class "sut-ref" as ietf_ped_catalog_I_sut_ref_grouping <<(G,Lime) grouping>> 
+ietf_ped_catalog_I_sut_ref_grouping : id : string  
+ietf_ped_catalog_I_sut_ref_grouping : uri : string  
+ietf_ped_catalog_I_sut_ref_grouping : vendor-name-version-id-ref {uses} 
+ietf_ped_catalog_I_sut_ref_grouping : generic-description {uses} 
+class "probe" as ietf_ped_catalog_I_probe_grouping <<(G,Lime) grouping>> 
+ietf_ped_catalog_I_probe_grouping : id : string  
+ietf_ped_catalog_I_probe_grouping : container-image : string   {mandatory}
+ietf_ped_catalog_I_probe_grouping : connection-point-ref : string  
+ietf_ped_catalog_I_probe_grouping : address : string  
+class "experiment-node-parameter" as ietf_ped_catalog_I_experiment_node_parameter_grouping <<(G,Lime) grouping>> 
+ietf_ped_catalog_I_experiment_node_parameter_grouping : id : string  
+class "experiment" as ietf_ped_catalog_I_experiment_grouping <<(G,Lime) grouping>> 
+ietf_ped_catalog_I_experiment_grouping : id : string  
+ietf_ped_catalog_I_experiment_grouping : repetitions : uint64  
+ietf_ped_catalog_I_experiment_grouping : time-limit : time-in-seconds  
+class "probes" as ietf_ped_catalog_I_experiment_I_probes << (L, #FF7700) list>> 
+ietf_ped_catalog_I_experiment_grouping *-- "0..N" ietf_ped_catalog_I_experiment_I_probes 
+ietf_ped_catalog_I_experiment_I_probes : probe {uses} 
+class "parameters" as ietf_ped_catalog_I_experiment_I_parameters << (L, #FF7700) list>> 
+ietf_ped_catalog_I_experiment_grouping *-- "0..N" ietf_ped_catalog_I_experiment_I_parameters 
+ietf_ped_catalog_I_experiment_I_parameters : experiment-node-parameter {uses} 
+class "ped" as ietf_ped_catalog_I_ped_grouping <<(G,Lime) grouping>> 
+ietf_ped_catalog_I_ped_grouping : +id : string  {key} 
+ietf_ped_catalog_I_ped_grouping : descriptor-version : decimal64   = 1.0 
+ietf_ped_catalog_I_ped_grouping : vendor : string   {mandatory}
+ietf_ped_catalog_I_ped_grouping : name : string   {mandatory}
+ietf_ped_catalog_I_ped_grouping : version : string   {mandatory}
+ietf_ped_catalog_I_ped_grouping : generic-description {uses} 
+ietf_ped_catalog_I_ped_grouping : author : string  
+class "targets" as ietf_ped_catalog_I_ped_I_targets << (L, #FF7700) list>> 
+ietf_ped_catalog_I_ped_grouping *-- "1..N" ietf_ped_catalog_I_ped_I_targets 
+ietf_ped_catalog_I_ped_I_targets : sut-ref {uses} 
+class "experiments" as ietf_ped_catalog_I_ped_I_experiments << (L, #FF7700) list>> 
+ietf_ped_catalog_I_ped_grouping *-- "1..N" ietf_ped_catalog_I_ped_I_experiments 
+ietf_ped_catalog_I_ped_I_experiments : experiment {uses} 
+class "ped-catalog" as  ietf_ped_catalog_I_ped_catalog <<container>> 
+ietf_ped_catalog *-- "1" ietf_ped_catalog_I_ped_catalog 
+class "peds" as ietf_ped_catalog_I_ped_catalog_I_peds << (L, #FF7700) list>> 
+ietf_ped_catalog_I_ped_catalog *-- "0..N" ietf_ped_catalog_I_ped_catalog_I_peds 
+ietf_ped_catalog_I_ped_catalog_I_peds : ped {uses} 
+} 
+
+ietf_ped_catalog_I_sut_ref_grouping --> ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : uses 
+ietf_ped_catalog_I_sut_ref_grouping --> ietf_ped_catalog_I_generic_description_grouping : uses 
+ietf_ped_catalog_I_experiment_I_probes --> ietf_ped_catalog_I_probe_grouping : uses 
+ietf_ped_catalog_I_experiment_I_parameters --> ietf_ped_catalog_I_experiment_node_parameter_grouping : uses 
+ietf_ped_catalog_I_ped_grouping --> ietf_ped_catalog_I_generic_description_grouping : uses 
+ietf_ped_catalog_I_ped_I_targets --> ietf_ped_catalog_I_sut_ref_grouping : uses 
+ietf_ped_catalog_I_ped_I_experiments --> ietf_ped_catalog_I_experiment_grouping : uses 
+ietf_ped_catalog_I_ped_catalog_I_peds --> ietf_ped_catalog_I_ped_grouping : uses 
+center footer
+ <size:20> UML Generated : 2019-03-06 13:32 </size>
+ endfooter 
+@enduml 

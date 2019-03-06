@@ -1,0 +1,28 @@
+module: ietf-ped-catalog
+  +--rw ped-catalog
+     +--rw peds* [id]
+        +--rw id                    string
+        +--rw descriptor-version?   decimal64
+        +--rw vendor                string
+        +--rw name                  string
+        +--rw version               string
+        +--rw description?          string
+        +--rw author?               string
+        +--rw targets* [id]
+        |  +--rw id             string
+        |  +--rw uri?           string
+        |  +--rw vendor-ref     string
+        |  +--rw name-ref       string
+        |  +--rw version-ref    string
+        |  +--rw description?   string
+        +--rw experiments* [id]
+           +--rw id             string
+           +--rw repetitions?   uint64
+           +--rw time-limit?    time-in-seconds
+           +--rw probes* [id]
+           |  +--rw id                      string
+           |  +--rw container-image         string
+           |  +--rw connection-point-ref?   string
+           |  +--rw address?                string
+           +--rw parameters* [id]
+              +--rw id    string

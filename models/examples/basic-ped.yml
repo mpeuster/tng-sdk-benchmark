@@ -28,17 +28,36 @@
 ped-catalog:  # we need this construct to build an IETF 6087 4.9 compatible data model which can even contain no PED.
   peds:  # a single file can specify multiple PEDs.
     - id: "my_first_ped"
-      descriptor-schema: "https://github.com/sonata-nfv/tng-sdk-benchmark/blob/master/models/"
-      vendor: "com.vendor"
-      # name: "my_example_ped"  # this should produce an error
+      descriptor-version: 1.0
+      vendor: "de.upb"
+      name: "my_example_ped"
       version: "0.1"
       author: "Manuel Peuster <manuel@peuster.de>"
       description: "Example PED."
       targets:
-        - id: "first_vnf"
-          name: "myvnf"
-        - id: "first_vnf2"
-          name: "myvnf"
+        - id: "first_tested_service"
+          vendor-ref: "de.upb"
+          name-ref: "ns-1vnf-ids-suricata"
+          version-ref: "0.1"
+          uri: "file://../services/ns-1vnf-ids-suricata"
+      experiments:
+        - id: "first_experiment"
+          repetitions: 25
+          time-limit: 30 # unit?
+          probes:
+            - id: "mp.output"
+              container-image: "mpeuster/tng-bench-mp"
+              connection-point-ref: "ns:output"
+              address: "20.0.0.254/24"
+            - id: "mp.input"
+              container-image: "mpeuster/tng-bench-mp"
+              connection-point-ref: "ns:input"
+              address: "20.0.0.1/24"
+          parameters:
+            - id: "vnf_suricata_parameters"
+            
+          
+
 
 
 
