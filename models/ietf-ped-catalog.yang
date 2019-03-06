@@ -125,9 +125,29 @@ module ietf-ped-catalog
   grouping node-resource-parameter {
     description "Set of parameters to configure node resources";
     // TODO enable experiment parameterizastion
-    leaf cpu-bw {
-      type string;
-      description "CPU bandwidth limit";
+    // TODO isn't there a shorter way to define this? check union type! also check "refine"
+    // waht about having a grouping that contains the choice?
+    choice cpu-bw {
+      case scalar {
+        leaf cpu-bw-scalar {
+          type string;
+          description "CPU bandwidth limit";
+        }
+      }
+      case cpu-bw-list {
+        leaf-list cpu-bw-list {
+          type string;
+          description "";
+        }
+      }
+      case cpu-bw-macro {
+        container cpu-bw-macro {
+          leaf cpu-bw-min {
+            type string;
+            description "CPU bandwidth limit";
+          }
+        }
+      }
     }
     leaf cpu-core-set {
       type string;

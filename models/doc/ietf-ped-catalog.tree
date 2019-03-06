@@ -25,7 +25,7 @@ module: ietf-ped-catalog
            |  +--rw connection-point-ref?   string
            |  +--rw address?                string
            +--rw parameters* [id]
-              +--rw id                 string
+              +--rw id                     string
               +--rw (node-ref)
               |  +--:(vnf)
               |  |  +--rw vnf-ref
@@ -33,11 +33,18 @@ module: ietf-ped-catalog
               |  |     +--rw name-ref       string
               |  |     +--rw version-ref    string
               |  +--:(probe)
-              |     +--rw probe-ref?   -> ../../probes/id
-              +--rw cmd_start?         string
-              +--rw cmd_stop?          string
-              +--rw cpu_bw?            string
-              +--rw cpu_core_set?      string
-              +--rw mem_max?           string
-              +--rw mem_swap_max?      string
-              +--rw io_bw?             string
+              |     +--rw probe-ref?       -> ../../probes/id
+              +--rw cmd-start?             string
+              +--rw cmd-stop?              string
+              +--rw (cpu-bw)?
+              |  +--:(scalar)
+              |  |  +--rw cpu-bw-scalar?   string
+              |  +--:(cpu-bw-list)
+              |  |  +--rw cpu-bw-list*     string
+              |  +--:(cpu-bw-macro)
+              |     +--rw cpu-bw-macro
+              |        +--rw cpu-bw-scalar?   string
+              +--rw cpu-core-set?          string
+              +--rw mem-max?               string
+              +--rw mem-swap-max?          string
+              +--rw io-bw?                 string

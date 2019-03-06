@@ -711,7 +711,7 @@ uint64
                        <td nowrap>
                           <div id=9999 class=tier6>
                              <a class="leaf">&nbsp;</a>
-                             <abbr title="Start command"> <em> cmd_start </em></abbr>
+                             <abbr title="Start command"> <em> cmd-start </em></abbr>
                           </div>
                        </td>
                        <td>leaf</td>
@@ -720,12 +720,12 @@ uint64
                        <td nowrap>config</td>
                        <td>?</td>
                        <td>current</td>
-                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:cmd_start</td</tr> 
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:cmd-start</td</tr> 
 <tr id="1-1-1-9-11-8" class="a">
                        <td nowrap>
                           <div id=9999 class=tier6>
                              <a class="leaf">&nbsp;</a>
-                             <abbr title="Stop command"> <em> cmd_stop </em></abbr>
+                             <abbr title="Stop command"> <em> cmd-stop </em></abbr>
                           </div>
                        </td>
                        <td>leaf</td>
@@ -734,12 +734,46 @@ uint64
                        <td nowrap>config</td>
                        <td>?</td>
                        <td>current</td>
-                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:cmd_stop</td</tr> 
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:cmd-stop</td</tr> 
 <tr id="1-1-1-9-11-9" class="a">
+                       <td nowrap id="p4000">
+                          <div id="p5000" class="tier6">
+                             <a href="#" id="p6000"
+                                onclick="toggleRows(this);return false"
+                                class="folder">&nbsp;
+                             </a>
+                             <abbr title="No description">(cpu-bw)</abbr>
+                          </div>
+                       </td> 
+<td nowrap>choice</td>
+                    <td nowrap></td>
+                    <td nowrap>config</td>
+                    <td>Choice</td>
+                    <td>current</td>
+                    <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters</td>
+                    </tr> 
+<tr id="1-1-1-9-11-9-3" class="a">
+                       <td nowrap id="p4000">
+                          <div id="p5000" class="tier7">
+                             <a href="#" id="p6000"
+                                onclick="toggleRows(this);return false"
+                                class="folder">&nbsp;
+                             </a>
+                             <abbr title="No description">:(scalar)</abbr>
+                          </div>
+                       </td> 
+<td nowrap>case</td>
+                    <td nowrap></td>
+                    <td nowrap>config</td>
+                    <td></td>
+                    <td>current</td>
+                    <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters</td>
+                    </tr> 
+<tr id="1-1-1-9-11-9-3-3" class="a">
                        <td nowrap>
-                          <div id=9999 class=tier6>
+                          <div id=9999 class=tier8>
                              <a class="leaf">&nbsp;</a>
-                             <abbr title="CPU bandwidth limit"> <em> cpu_bw </em></abbr>
+                             <abbr title="CPU bandwidth limit"> <em> cpu-bw-scalar </em></abbr>
                           </div>
                        </td>
                        <td>leaf</td>
@@ -748,12 +782,91 @@ uint64
                        <td nowrap>config</td>
                        <td>?</td>
                        <td>current</td>
-                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:cpu_bw</td</tr> 
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:cpu-bw-scalar</td</tr> 
+<tr id="1-1-1-9-11-9-4" class="a">
+                       <td nowrap id="p4000">
+                          <div id="p5000" class="tier7">
+                             <a href="#" id="p6000"
+                                onclick="toggleRows(this);return false"
+                                class="folder">&nbsp;
+                             </a>
+                             <abbr title="No description">:(cpu-bw-list)</abbr>
+                          </div>
+                       </td> 
+<td nowrap>case</td>
+                    <td nowrap></td>
+                    <td nowrap>config</td>
+                    <td></td>
+                    <td>current</td>
+                    <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters</td>
+                    </tr> 
+<tr id="1-1-1-9-11-9-4-4" class="a">
+                       <td nowrap>
+                          <div id=9999 class=tier8>
+                             <a class="leaf-list">&nbsp;</a>
+                             <abbr title="">  cpu-bw-list </abbr>
+                          </div>
+                       </td>
+                       <td>leaf-list</td>
+                       <td nowrap><abbr title="string
+">string</abbr></td>
+                       <td nowrap>config</td>
+                       <td>*</td>
+                       <td>current</td>
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:cpu-bw-list</td</tr> 
+<tr id="1-1-1-9-11-9-5" class="a">
+                       <td nowrap id="p4000">
+                          <div id="p5000" class="tier7">
+                             <a href="#" id="p6000"
+                                onclick="toggleRows(this);return false"
+                                class="folder">&nbsp;
+                             </a>
+                             <abbr title="No description">:(cpu-bw-macro)</abbr>
+                          </div>
+                       </td> 
+<td nowrap>case</td>
+                    <td nowrap></td>
+                    <td nowrap>config</td>
+                    <td></td>
+                    <td>current</td>
+                    <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters</td>
+                    </tr> 
+<tr id="1-1-1-9-11-9-5-5" class="a">
+                       <td nowrap id="p4000">
+                          <div id="p5000" class="tier8">
+                             <a href="#" id="p6000"
+                                onclick="toggleRows(this);return false"
+                                class="folder">&nbsp;
+                             </a>
+                             <abbr title="No description">cpu-bw-macro</abbr>
+                          </div>
+                       </td> 
+<td nowrap>container</td>
+                    <td nowrap></td>
+                    <td nowrap>config</td>
+                    <td></td>
+                    <td>current</td>
+                    <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:cpu-bw-macro</td>
+                    </tr> 
+<tr id="1-1-1-9-11-9-5-5-4" class="a">
+                       <td nowrap>
+                          <div id=9999 class=tier9>
+                             <a class="leaf">&nbsp;</a>
+                             <abbr title="CPU bandwidth limit"> <em> cpu-bw-scalar </em></abbr>
+                          </div>
+                       </td>
+                       <td>leaf</td>
+                       <td nowrap><abbr title="string
+">string</abbr></td>
+                       <td nowrap>config</td>
+                       <td>?</td>
+                       <td>current</td>
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:cpu-bw-macro/pe:cpu-bw-scalar</td</tr> 
 <tr id="1-1-1-9-11-10" class="a">
                        <td nowrap>
                           <div id=9999 class=tier6>
                              <a class="leaf">&nbsp;</a>
-                             <abbr title="CPU core set"> <em> cpu_core_set </em></abbr>
+                             <abbr title="CPU core set"> <em> cpu-core-set </em></abbr>
                           </div>
                        </td>
                        <td>leaf</td>
@@ -762,12 +875,12 @@ uint64
                        <td nowrap>config</td>
                        <td>?</td>
                        <td>current</td>
-                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:cpu_core_set</td</tr> 
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:cpu-core-set</td</tr> 
 <tr id="1-1-1-9-11-11" class="a">
                        <td nowrap>
                           <div id=9999 class=tier6>
                              <a class="leaf">&nbsp;</a>
-                             <abbr title="Memory limit"> <em> mem_max </em></abbr>
+                             <abbr title="Memory limit"> <em> mem-max </em></abbr>
                           </div>
                        </td>
                        <td>leaf</td>
@@ -776,12 +889,12 @@ uint64
                        <td nowrap>config</td>
                        <td>?</td>
                        <td>current</td>
-                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:mem_max</td</tr> 
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:mem-max</td</tr> 
 <tr id="1-1-1-9-11-12" class="a">
                        <td nowrap>
                           <div id=9999 class=tier6>
                              <a class="leaf">&nbsp;</a>
-                             <abbr title="Memory swap limit"> <em> mem_swap_max </em></abbr>
+                             <abbr title="Memory swap limit"> <em> mem-swap-max </em></abbr>
                           </div>
                        </td>
                        <td>leaf</td>
@@ -790,12 +903,12 @@ uint64
                        <td nowrap>config</td>
                        <td>?</td>
                        <td>current</td>
-                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:mem_swap_max</td</tr> 
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:mem-swap-max</td</tr> 
 <tr id="1-1-1-9-11-13" class="a">
                        <td nowrap>
                           <div id=9999 class=tier6>
                              <a class="leaf">&nbsp;</a>
-                             <abbr title="IO bandwidth limit"> <em> io_bw </em></abbr>
+                             <abbr title="IO bandwidth limit"> <em> io-bw </em></abbr>
                           </div>
                        </td>
                        <td>leaf</td>
@@ -804,7 +917,7 @@ uint64
                        <td nowrap>config</td>
                        <td>?</td>
                        <td>current</td>
-                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:io_bw</td</tr> 
+                       <td nowrap>/pe:ped-catalog/pe:peds/pe:experiments/pe:parameters/pe:io-bw</td</tr> 
 
 </table>
 </div>
