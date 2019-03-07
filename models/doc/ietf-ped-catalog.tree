@@ -34,11 +34,65 @@ module: ietf-ped-catalog
               |  |     +--rw version-ref    string
               |  +--:(probe)
               |     +--rw probe-ref?   -> ../../probes/id
-              +--rw cmd-start?         string
-              +--rw cmd-stop?          string
+              +--rw cmd-start
+              |  +--rw (parameter)
+              |     +--:(scalar)
+              |     |  +--rw scalar    string
+              |     +--:(vector)
+              |        +--rw vector*   string
+              +--rw cmd-stop
+              |  +--rw (parameter)
+              |     +--:(scalar)
+              |     |  +--rw scalar    string
+              |     +--:(vector)
+              |        +--rw vector*   string
               +--rw cpu-bw
-                 +--rw (parameter)?
+              |  +--rw (parameter)
+              |     +--:(scalar)
+              |     |  +--rw scalar    decimal64
+              |     +--:(vector)
+              |     |  +--rw vector*   decimal64
+              |     +--:(loop)
+              |        +--rw loop
+              |           +--rw begin    decimal64
+              |           +--rw end      decimal64
+              |           +--rw step?    decimal64
+              +--rw cpu-core-set
+              |  +--rw (parameter)
+              |     +--:(scalar)
+              |     |  +--rw scalar    string
+              |     +--:(vector)
+              |        +--rw vector*   string
+              +--rw mem-max
+              |  +--rw (parameter)
+              |     +--:(scalar)
+              |     |  +--rw scalar    decimal64
+              |     +--:(vector)
+              |     |  +--rw vector*   decimal64
+              |     +--:(loop)
+              |        +--rw loop
+              |           +--rw begin    decimal64
+              |           +--rw end      decimal64
+              |           +--rw step?    decimal64
+              +--rw mem-swap-max
+              |  +--rw (parameter)
+              |     +--:(scalar)
+              |     |  +--rw scalar    decimal64
+              |     +--:(vector)
+              |     |  +--rw vector*   decimal64
+              |     +--:(loop)
+              |        +--rw loop
+              |           +--rw begin    decimal64
+              |           +--rw end      decimal64
+              |           +--rw step?    decimal64
+              +--rw io-bw
+                 +--rw (parameter)
                     +--:(scalar)
-                    |  +--rw scalar?        string
-                    +--:(scalar-list)
-                       +--rw scalar-list*   string
+                    |  +--rw scalar    decimal64
+                    +--:(vector)
+                    |  +--rw vector*   decimal64
+                    +--:(loop)
+                       +--rw loop
+                          +--rw begin    decimal64
+                          +--rw end      decimal64
+                          +--rw step?    decimal64

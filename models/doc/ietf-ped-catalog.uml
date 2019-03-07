@@ -23,6 +23,31 @@ ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : name-ref : string   {ma
 ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : version-ref : string   {mandatory}
 class "generic-description" as ietf_ped_catalog_I_generic_description_grouping <<(G,Lime) grouping>> 
 ietf_ped_catalog_I_generic_description_grouping : description : string  
+class "expandable-parameter-float" as ietf_ped_catalog_I_expandable_parameter_float_grouping <<(G,Lime) grouping>> 
+class "parameter" as ietf_ped_catalog_I_expandable_parameter_float_I_parameter <<choice>> 
+ietf_ped_catalog_I_expandable_parameter_float_grouping .. ietf_ped_catalog_I_expandable_parameter_float_I_parameter : choice 
+class "scalar" as ietf_ped_catalog_I_expandable_parameter_float_I_parameter_I_scalar_case <<case>>
+ietf_ped_catalog_I_expandable_parameter_float_I_parameter .. ietf_ped_catalog_I_expandable_parameter_float_I_parameter_I_scalar_case  : choice parameter
+ietf_ped_catalog_I_expandable_parameter_float_I_parameter_I_scalar_case : scalar : decimal64   {mandatory}
+class "vector" as ietf_ped_catalog_I_expandable_parameter_float_I_parameter_I_vector_case <<case>>
+ietf_ped_catalog_I_expandable_parameter_float_I_parameter .. ietf_ped_catalog_I_expandable_parameter_float_I_parameter_I_vector_case  : choice parameter
+ietf_ped_catalog_I_expandable_parameter_float_I_parameter_I_vector_case : vector []: decimal64 
+class "loop" as ietf_ped_catalog_I_expandable_parameter_float_I_parameter_I_loop_case <<case>>
+ietf_ped_catalog_I_expandable_parameter_float_I_parameter .. ietf_ped_catalog_I_expandable_parameter_float_I_parameter_I_loop_case  : choice parameter
+class "loop" as  ietf_ped_catalog_I_expandable_parameter_float_I_parameter_I_loop_I_loop <<container>> 
+ietf_ped_catalog_I_expandable_parameter_float_I_parameter_I_loop_case *-- "1" ietf_ped_catalog_I_expandable_parameter_float_I_parameter_I_loop_I_loop 
+ietf_ped_catalog_I_expandable_parameter_float_I_parameter_I_loop_I_loop : begin : decimal64   {mandatory}
+ietf_ped_catalog_I_expandable_parameter_float_I_parameter_I_loop_I_loop : end : decimal64   {mandatory}
+ietf_ped_catalog_I_expandable_parameter_float_I_parameter_I_loop_I_loop : step : decimal64  
+class "expandable-parameter-string" as ietf_ped_catalog_I_expandable_parameter_string_grouping <<(G,Lime) grouping>> 
+class "parameter" as ietf_ped_catalog_I_expandable_parameter_string_I_parameter <<choice>> 
+ietf_ped_catalog_I_expandable_parameter_string_grouping .. ietf_ped_catalog_I_expandable_parameter_string_I_parameter : choice 
+class "scalar" as ietf_ped_catalog_I_expandable_parameter_string_I_parameter_I_scalar_case <<case>>
+ietf_ped_catalog_I_expandable_parameter_string_I_parameter .. ietf_ped_catalog_I_expandable_parameter_string_I_parameter_I_scalar_case  : choice parameter
+ietf_ped_catalog_I_expandable_parameter_string_I_parameter_I_scalar_case : scalar : string   {mandatory}
+class "vector" as ietf_ped_catalog_I_expandable_parameter_string_I_parameter_I_vector_case <<case>>
+ietf_ped_catalog_I_expandable_parameter_string_I_parameter .. ietf_ped_catalog_I_expandable_parameter_string_I_parameter_I_vector_case  : choice parameter
+ietf_ped_catalog_I_expandable_parameter_string_I_parameter_I_vector_case : vector []: string 
 class "sut-ref" as ietf_ped_catalog_I_sut_ref_grouping <<(G,Lime) grouping>> 
 ietf_ped_catalog_I_sut_ref_grouping : id : string  
 ietf_ped_catalog_I_sut_ref_grouping : uri : string  
@@ -34,35 +59,28 @@ ietf_ped_catalog_I_probe_grouping : container-image : string   {mandatory}
 ietf_ped_catalog_I_probe_grouping : connection-point-ref : string  
 ietf_ped_catalog_I_probe_grouping : address : string  
 class "node-command-parameter" as ietf_ped_catalog_I_node_command_parameter_grouping <<(G,Lime) grouping>> 
-ietf_ped_catalog_I_node_command_parameter_grouping : cmd-start : string  
-ietf_ped_catalog_I_node_command_parameter_grouping : cmd-stop : string  
-class "pmacro" as ietf_ped_catalog_I_pmacro_grouping <<(G,Lime) grouping>> 
-class "parameter" as ietf_ped_catalog_I_pmacro_I_parameter <<choice>> 
-ietf_ped_catalog_I_pmacro_grouping .. ietf_ped_catalog_I_pmacro_I_parameter : choice 
-class "scalar" as ietf_ped_catalog_I_pmacro_I_parameter_I_scalar_case <<case>>
-ietf_ped_catalog_I_pmacro_I_parameter .. ietf_ped_catalog_I_pmacro_I_parameter_I_scalar_case  : choice parameter
-ietf_ped_catalog_I_pmacro_I_parameter_I_scalar_case : scalar : string  
-class "scalar-list" as ietf_ped_catalog_I_pmacro_I_parameter_I_scalar_list_case <<case>>
-ietf_ped_catalog_I_pmacro_I_parameter .. ietf_ped_catalog_I_pmacro_I_parameter_I_scalar_list_case  : choice parameter
-ietf_ped_catalog_I_pmacro_I_parameter_I_scalar_list_case : scalar-list []: string 
+class "cmd-start" as  ietf_ped_catalog_I_node_command_parameter_I_cmd_start <<container>> 
+ietf_ped_catalog_I_node_command_parameter_grouping *-- "1" ietf_ped_catalog_I_node_command_parameter_I_cmd_start 
+ietf_ped_catalog_I_node_command_parameter_I_cmd_start : expandable-parameter-string {uses} 
+class "cmd-stop" as  ietf_ped_catalog_I_node_command_parameter_I_cmd_stop <<container>> 
+ietf_ped_catalog_I_node_command_parameter_grouping *-- "1" ietf_ped_catalog_I_node_command_parameter_I_cmd_stop 
+ietf_ped_catalog_I_node_command_parameter_I_cmd_stop : expandable-parameter-string {uses} 
 class "node-resource-parameter" as ietf_ped_catalog_I_node_resource_parameter_grouping <<(G,Lime) grouping>> 
 class "cpu-bw" as  ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw <<container>> 
 ietf_ped_catalog_I_node_resource_parameter_grouping *-- "1" ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw 
-ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw : pmacro {uses} 
-class "experiment-node-parameter" as ietf_ped_catalog_I_experiment_node_parameter_grouping <<(G,Lime) grouping>> 
-ietf_ped_catalog_I_experiment_node_parameter_grouping : id : string  
-class "node-ref" as ietf_ped_catalog_I_experiment_node_parameter_I_node_ref <<choice>> 
-ietf_ped_catalog_I_experiment_node_parameter_grouping .. ietf_ped_catalog_I_experiment_node_parameter_I_node_ref : choice 
-class "vnf" as ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_case <<case>>
-ietf_ped_catalog_I_experiment_node_parameter_I_node_ref .. ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_case  : choice node-ref
-class "vnf-ref" as  ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_I_vnf_ref <<container>> 
-ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_case *-- "1" ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_I_vnf_ref 
-ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_I_vnf_ref : vendor-name-version-id-ref {uses} 
-class "probe" as ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_probe_case <<case>>
-ietf_ped_catalog_I_experiment_node_parameter_I_node_ref .. ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_probe_case  : choice node-ref
-ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_probe_case : probe-ref : leafref : ../../probes/id  
-ietf_ped_catalog_I_experiment_node_parameter_grouping : node-command-parameter {uses} 
-ietf_ped_catalog_I_experiment_node_parameter_grouping : node-resource-parameter {uses} 
+ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw : expandable-parameter-float {uses} 
+class "cpu-core-set" as  ietf_ped_catalog_I_node_resource_parameter_I_cpu_core_set <<container>> 
+ietf_ped_catalog_I_node_resource_parameter_grouping *-- "1" ietf_ped_catalog_I_node_resource_parameter_I_cpu_core_set 
+ietf_ped_catalog_I_node_resource_parameter_I_cpu_core_set : expandable-parameter-string {uses} 
+class "mem-max" as  ietf_ped_catalog_I_node_resource_parameter_I_mem_max <<container>> 
+ietf_ped_catalog_I_node_resource_parameter_grouping *-- "1" ietf_ped_catalog_I_node_resource_parameter_I_mem_max 
+ietf_ped_catalog_I_node_resource_parameter_I_mem_max : expandable-parameter-float {uses} 
+class "mem-swap-max" as  ietf_ped_catalog_I_node_resource_parameter_I_mem_swap_max <<container>> 
+ietf_ped_catalog_I_node_resource_parameter_grouping *-- "1" ietf_ped_catalog_I_node_resource_parameter_I_mem_swap_max 
+ietf_ped_catalog_I_node_resource_parameter_I_mem_swap_max : expandable-parameter-float {uses} 
+class "io-bw" as  ietf_ped_catalog_I_node_resource_parameter_I_io_bw <<container>> 
+ietf_ped_catalog_I_node_resource_parameter_grouping *-- "1" ietf_ped_catalog_I_node_resource_parameter_I_io_bw 
+ietf_ped_catalog_I_node_resource_parameter_I_io_bw : expandable-parameter-float {uses} 
 class "experiment" as ietf_ped_catalog_I_experiment_grouping <<(G,Lime) grouping>> 
 ietf_ped_catalog_I_experiment_grouping : id : string  
 ietf_ped_catalog_I_experiment_grouping : repetitions : uint64  
@@ -72,7 +90,19 @@ ietf_ped_catalog_I_experiment_grouping *-- "0..N" ietf_ped_catalog_I_experiment_
 ietf_ped_catalog_I_experiment_I_probes : probe {uses} 
 class "parameters" as ietf_ped_catalog_I_experiment_I_parameters << (L, #FF7700) list>> 
 ietf_ped_catalog_I_experiment_grouping *-- "0..N" ietf_ped_catalog_I_experiment_I_parameters 
-ietf_ped_catalog_I_experiment_I_parameters : experiment-node-parameter {uses} 
+ietf_ped_catalog_I_experiment_I_parameters : +id : string  {key} 
+class "node-ref" as ietf_ped_catalog_I_experiment_I_parameters_I_node_ref <<choice>> 
+ietf_ped_catalog_I_experiment_I_parameters .. ietf_ped_catalog_I_experiment_I_parameters_I_node_ref : choice 
+class "vnf" as ietf_ped_catalog_I_experiment_I_parameters_I_node_ref_I_vnf_case <<case>>
+ietf_ped_catalog_I_experiment_I_parameters_I_node_ref .. ietf_ped_catalog_I_experiment_I_parameters_I_node_ref_I_vnf_case  : choice node-ref
+class "vnf-ref" as  ietf_ped_catalog_I_experiment_I_parameters_I_node_ref_I_vnf_I_vnf_ref <<container>> 
+ietf_ped_catalog_I_experiment_I_parameters_I_node_ref_I_vnf_case *-- "1" ietf_ped_catalog_I_experiment_I_parameters_I_node_ref_I_vnf_I_vnf_ref 
+ietf_ped_catalog_I_experiment_I_parameters_I_node_ref_I_vnf_I_vnf_ref : vendor-name-version-id-ref {uses} 
+class "probe" as ietf_ped_catalog_I_experiment_I_parameters_I_node_ref_I_probe_case <<case>>
+ietf_ped_catalog_I_experiment_I_parameters_I_node_ref .. ietf_ped_catalog_I_experiment_I_parameters_I_node_ref_I_probe_case  : choice node-ref
+ietf_ped_catalog_I_experiment_I_parameters_I_node_ref_I_probe_case : probe-ref : leafref : ../../probes/id  
+ietf_ped_catalog_I_experiment_I_parameters : node-command-parameter {uses} 
+ietf_ped_catalog_I_experiment_I_parameters : node-resource-parameter {uses} 
 class "ped" as ietf_ped_catalog_I_ped_grouping <<(G,Lime) grouping>> 
 ietf_ped_catalog_I_ped_grouping : +id : string  {key} 
 ietf_ped_catalog_I_ped_grouping : descriptor-version : decimal64   = 1.0 
@@ -96,17 +126,22 @@ ietf_ped_catalog_I_ped_catalog_I_peds : ped {uses}
 
 ietf_ped_catalog_I_sut_ref_grouping --> ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : uses 
 ietf_ped_catalog_I_sut_ref_grouping --> ietf_ped_catalog_I_generic_description_grouping : uses 
-ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw --> ietf_ped_catalog_I_pmacro_grouping : uses 
-ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_I_vnf_ref --> ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : uses 
-ietf_ped_catalog_I_experiment_node_parameter_grouping --> ietf_ped_catalog_I_node_command_parameter_grouping : uses 
-ietf_ped_catalog_I_experiment_node_parameter_grouping --> ietf_ped_catalog_I_node_resource_parameter_grouping : uses 
+ietf_ped_catalog_I_node_command_parameter_I_cmd_start --> ietf_ped_catalog_I_expandable_parameter_string_grouping : uses 
+ietf_ped_catalog_I_node_command_parameter_I_cmd_stop --> ietf_ped_catalog_I_expandable_parameter_string_grouping : uses 
+ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw --> ietf_ped_catalog_I_expandable_parameter_float_grouping : uses 
+ietf_ped_catalog_I_node_resource_parameter_I_cpu_core_set --> ietf_ped_catalog_I_expandable_parameter_string_grouping : uses 
+ietf_ped_catalog_I_node_resource_parameter_I_mem_max --> ietf_ped_catalog_I_expandable_parameter_float_grouping : uses 
+ietf_ped_catalog_I_node_resource_parameter_I_mem_swap_max --> ietf_ped_catalog_I_expandable_parameter_float_grouping : uses 
+ietf_ped_catalog_I_node_resource_parameter_I_io_bw --> ietf_ped_catalog_I_expandable_parameter_float_grouping : uses 
 ietf_ped_catalog_I_experiment_I_probes --> ietf_ped_catalog_I_probe_grouping : uses 
-ietf_ped_catalog_I_experiment_I_parameters --> ietf_ped_catalog_I_experiment_node_parameter_grouping : uses 
+ietf_ped_catalog_I_experiment_I_parameters_I_node_ref_I_vnf_I_vnf_ref --> ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : uses 
+ietf_ped_catalog_I_experiment_I_parameters --> ietf_ped_catalog_I_node_command_parameter_grouping : uses 
+ietf_ped_catalog_I_experiment_I_parameters --> ietf_ped_catalog_I_node_resource_parameter_grouping : uses 
 ietf_ped_catalog_I_ped_grouping --> ietf_ped_catalog_I_generic_description_grouping : uses 
 ietf_ped_catalog_I_ped_I_targets --> ietf_ped_catalog_I_sut_ref_grouping : uses 
 ietf_ped_catalog_I_ped_I_experiments --> ietf_ped_catalog_I_experiment_grouping : uses 
 ietf_ped_catalog_I_ped_catalog_I_peds --> ietf_ped_catalog_I_ped_grouping : uses 
 center footer
- <size:20> UML Generated : 2019-03-07 15:07 </size>
+ <size:20> UML Generated : 2019-03-07 16:30 </size>
  endfooter 
 @enduml 

@@ -59,31 +59,40 @@ ped-catalog:  # we need this construct to build an IETF 6087 4.9 compatible data
                 vendor-ref: "de.upb"
                 name-ref: "ids-suricata"
                 version-ref: "0.1"
-              cmd-start: "./start.sh small_rulset"
-              cmd-stop: "./stop.sh"
+              cmd-start:
+                vector:
+                  - "./start.sh small_rulset"
+                  - "./start.sh large_ruleset"
+              cmd-stop:
+                  scalar: "./stop.sh"
               cpu-bw:
-                scalar-list: "hello"
-            #   cpu-core-set: "0,1"
-            #   mem-max: 2048
-            #   mem-swap-max: null
-            #   io-bw: null
-            # - id: "02"
-            #   probe-ref: "mp.output"
-            #   cmd-stop: "./stop.sh"
-            #   cpu-core-set: "15"
-            # - id: "03"
-            #   probe-ref: "mp.input"
-            #   cmd-start: "tcpreplay -i data -tK --loop 1000 --preload-pcap /pcaps/smallFlows.pcap"
-            #   cmd-stop: "./stop.sh"
-            #   cpu-bw: null
-            #   cpu-core-set: "16"
-            #   mem-max: 2048
-            #   mem-swap-max: null
-            #   io-bw: null
-            
-          
-
-
-
-
+                loop: 
+                  begin: 0.1
+                  end: 2.0
+                  step: 0.2
+              cpu-core-set:
+                scalar: "0,1"
+              mem-max:
+                vector:
+                  - 1024
+                  - 2048
+              mem-swap-max: null
+              io-bw: null
+            - id: "02"
+              probe-ref: "mp.output"
+              cpu-core-set:
+                scalar: "15"
+              mem-max:
+                scalar: 1024
+            - id: "03"
+              probe-ref: "mp.input"
+              cmd-start: "tcpreplay -i data -tK --loop 1000 --preload-pcap /pcaps/smallFlows.pcap"
+              cmd-start:
+                scalar: "tcpreplay -i data -tK --loop 1000 --preload-pcap /pcaps/smallFlows.pcap"
+              cmd-stop:
+                  scalar: "./stop.sh"
+              cpu-core-set:
+                scalar: "16"
+              mem-max:
+                scalar: 1024
   
