@@ -36,24 +36,19 @@ ietf_ped_catalog_I_probe_grouping : address : string
 class "node-command-parameter" as ietf_ped_catalog_I_node_command_parameter_grouping <<(G,Lime) grouping>> 
 ietf_ped_catalog_I_node_command_parameter_grouping : cmd-start : string  
 ietf_ped_catalog_I_node_command_parameter_grouping : cmd-stop : string  
+class "pmacro" as ietf_ped_catalog_I_pmacro_grouping <<(G,Lime) grouping>> 
+class "parameter" as ietf_ped_catalog_I_pmacro_I_parameter <<choice>> 
+ietf_ped_catalog_I_pmacro_grouping .. ietf_ped_catalog_I_pmacro_I_parameter : choice 
+class "scalar" as ietf_ped_catalog_I_pmacro_I_parameter_I_scalar_case <<case>>
+ietf_ped_catalog_I_pmacro_I_parameter .. ietf_ped_catalog_I_pmacro_I_parameter_I_scalar_case  : choice parameter
+ietf_ped_catalog_I_pmacro_I_parameter_I_scalar_case : scalar : string  
+class "scalar-list" as ietf_ped_catalog_I_pmacro_I_parameter_I_scalar_list_case <<case>>
+ietf_ped_catalog_I_pmacro_I_parameter .. ietf_ped_catalog_I_pmacro_I_parameter_I_scalar_list_case  : choice parameter
+ietf_ped_catalog_I_pmacro_I_parameter_I_scalar_list_case : scalar-list []: string 
 class "node-resource-parameter" as ietf_ped_catalog_I_node_resource_parameter_grouping <<(G,Lime) grouping>> 
-class "cpu-bw" as ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw <<choice>> 
-ietf_ped_catalog_I_node_resource_parameter_grouping .. ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw : choice 
-class "scalar" as ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw_I_scalar_case <<case>>
-ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw .. ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw_I_scalar_case  : choice cpu-bw
-ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw_I_scalar_case : cpu-bw-scalar : string  
-class "cpu-bw-list" as ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw_I_cpu_bw_list_case <<case>>
-ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw .. ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw_I_cpu_bw_list_case  : choice cpu-bw
-ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw_I_cpu_bw_list_case : cpu-bw-list []: string 
-class "cpu-bw-macro" as ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw_I_cpu_bw_macro_case <<case>>
-ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw .. ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw_I_cpu_bw_macro_case  : choice cpu-bw
-class "cpu-bw-macro" as  ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw_I_cpu_bw_macro_I_cpu_bw_macro <<container>> 
-ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw_I_cpu_bw_macro_case *-- "1" ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw_I_cpu_bw_macro_I_cpu_bw_macro 
-ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw_I_cpu_bw_macro_I_cpu_bw_macro : cpu-bw-scalar : string  
-ietf_ped_catalog_I_node_resource_parameter_grouping : cpu-core-set : string  
-ietf_ped_catalog_I_node_resource_parameter_grouping : mem-max : string  
-ietf_ped_catalog_I_node_resource_parameter_grouping : mem-swap-max : string  
-ietf_ped_catalog_I_node_resource_parameter_grouping : io-bw : string  
+class "cpu-bw" as  ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw <<container>> 
+ietf_ped_catalog_I_node_resource_parameter_grouping *-- "1" ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw 
+ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw : pmacro {uses} 
 class "experiment-node-parameter" as ietf_ped_catalog_I_experiment_node_parameter_grouping <<(G,Lime) grouping>> 
 ietf_ped_catalog_I_experiment_node_parameter_grouping : id : string  
 class "node-ref" as ietf_ped_catalog_I_experiment_node_parameter_I_node_ref <<choice>> 
@@ -101,6 +96,7 @@ ietf_ped_catalog_I_ped_catalog_I_peds : ped {uses}
 
 ietf_ped_catalog_I_sut_ref_grouping --> ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : uses 
 ietf_ped_catalog_I_sut_ref_grouping --> ietf_ped_catalog_I_generic_description_grouping : uses 
+ietf_ped_catalog_I_node_resource_parameter_I_cpu_bw --> ietf_ped_catalog_I_pmacro_grouping : uses 
 ietf_ped_catalog_I_experiment_node_parameter_I_node_ref_I_vnf_I_vnf_ref --> ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : uses 
 ietf_ped_catalog_I_experiment_node_parameter_grouping --> ietf_ped_catalog_I_node_command_parameter_grouping : uses 
 ietf_ped_catalog_I_experiment_node_parameter_grouping --> ietf_ped_catalog_I_node_resource_parameter_grouping : uses 
@@ -111,6 +107,6 @@ ietf_ped_catalog_I_ped_I_targets --> ietf_ped_catalog_I_sut_ref_grouping : uses
 ietf_ped_catalog_I_ped_I_experiments --> ietf_ped_catalog_I_experiment_grouping : uses 
 ietf_ped_catalog_I_ped_catalog_I_peds --> ietf_ped_catalog_I_ped_grouping : uses 
 center footer
- <size:20> UML Generated : 2019-03-06 19:56 </size>
+ <size:20> UML Generated : 2019-03-07 15:07 </size>
  endfooter 
 @enduml 

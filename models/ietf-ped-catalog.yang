@@ -122,48 +122,33 @@ module ietf-ped-catalog
     }
   }
 
+  grouping pmacro {
+    description "";
+    choice parameter {
+      case scalar {
+        leaf scalar {
+          type string;
+          description "CPU bandwidth limit";
+        }
+      }
+      case scalar-list {
+        leaf-list scalar-list {
+          type string;
+          description "";
+        }
+      }
+      description "";
+    }
+  }
+
   grouping node-resource-parameter {
     description "Set of parameters to configure node resources";
     // TODO enable experiment parameterizastion
     // TODO isn't there a shorter way to define this? check union type! also check "refine"
     // waht about having a grouping that contains the choice?
-    choice cpu-bw {
-      case scalar {
-        leaf cpu-bw-scalar {
-          type string;
-          description "CPU bandwidth limit";
-        }
-      }
-      case cpu-bw-list {
-        leaf-list cpu-bw-list {
-          type string;
-          description "";
-        }
-      }
-      case cpu-bw-macro {
-        container cpu-bw-macro {
-          leaf cpu-bw-min {
-            type string;
-            description "CPU bandwidth limit";
-          }
-        }
-      }
-    }
-    leaf cpu-core-set {
-      type string;
-      description "CPU core set";
-    }
-    leaf mem-max {
-      type string;
-      description "Memory limit";
-    }
-    leaf mem-swap-max {
-      type string;
-      description "Memory swap limit";
-    }
-    leaf io-bw {
-      type string;
-      description "IO bandwidth limit";
+    container cpu-bw {
+      description "";
+      uses pmacro;
     }
   }
 
