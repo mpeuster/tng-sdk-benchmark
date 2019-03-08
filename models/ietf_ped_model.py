@@ -40,11 +40,11 @@ class yc_targets_ietf_ped_catalog__ped_catalog_peds_targets(PybindBase):
     self._path_helper = False
 
     self._extmethods = False
-    self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__uri = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="uri", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__vendor_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vendor-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__name_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="name-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__version_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="version-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__id = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__uri = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="uri", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='inet:uri', is_config=True)
+    self.__vendor_ref = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="vendor-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__name_ref = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="name-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__version_ref = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[abv0-9\\-_.]+$', 'length': ['1..32']}), is_leaf=True, yang_name="version-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     self.__description = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="description", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
     load = kwargs.pop("load", None)
@@ -100,12 +100,12 @@ class yc_targets_ietf_ped_catalog__ped_catalog_peds_targets(PybindBase):
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
           'error-string': """id must be of a type compatible with string""",
           'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'generated-type': """YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
         })
 
     self.__id = t
@@ -113,12 +113,12 @@ class yc_targets_ietf_ped_catalog__ped_catalog_peds_targets(PybindBase):
       self._set()
 
   def _unset_id(self):
-    self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__id = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
 
   def _get_uri(self):
     """
-    Getter method for uri, mapped from YANG variable /ped_catalog/peds/targets/uri (string)
+    Getter method for uri, mapped from YANG variable /ped_catalog/peds/targets/uri (inet:uri)
 
     YANG Description: Path/URL pointing to the SUT's location
     """
@@ -126,7 +126,7 @@ class yc_targets_ietf_ped_catalog__ped_catalog_peds_targets(PybindBase):
       
   def _set_uri(self, v, load=False):
     """
-    Setter method for uri, mapped from YANG variable /ped_catalog/peds/targets/uri (string)
+    Setter method for uri, mapped from YANG variable /ped_catalog/peds/targets/uri (inet:uri)
     If this variable is read-only (config: false) in the
     source YANG file, then _set_uri is considered as a private
     method. Backends looking to populate this variable should
@@ -137,12 +137,12 @@ class yc_targets_ietf_ped_catalog__ped_catalog_peds_targets(PybindBase):
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="uri", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="uri", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='inet:uri', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
-          'error-string': """uri must be of a type compatible with string""",
-          'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="uri", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'error-string': """uri must be of a type compatible with inet:uri""",
+          'defined-type': "inet:uri",
+          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="uri", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='inet:uri', is_config=True)""",
         })
 
     self.__uri = t
@@ -150,7 +150,7 @@ class yc_targets_ietf_ped_catalog__ped_catalog_peds_targets(PybindBase):
       self._set()
 
   def _unset_uri(self):
-    self.__uri = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="uri", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__uri = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="uri", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='inet:uri', is_config=True)
 
 
   def _get_vendor_ref(self):
@@ -174,12 +174,12 @@ class yc_targets_ietf_ped_catalog__ped_catalog_peds_targets(PybindBase):
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="vendor-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="vendor-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
           'error-string': """vendor_ref must be of a type compatible with string""",
           'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vendor-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'generated-type': """YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="vendor-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
         })
 
     self.__vendor_ref = t
@@ -187,7 +187,7 @@ class yc_targets_ietf_ped_catalog__ped_catalog_peds_targets(PybindBase):
       self._set()
 
   def _unset_vendor_ref(self):
-    self.__vendor_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vendor-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__vendor_ref = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="vendor-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
 
   def _get_name_ref(self):
@@ -211,12 +211,12 @@ class yc_targets_ietf_ped_catalog__ped_catalog_peds_targets(PybindBase):
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="name-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="name-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
           'error-string': """name_ref must be of a type compatible with string""",
           'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="name-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'generated-type': """YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="name-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
         })
 
     self.__name_ref = t
@@ -224,7 +224,7 @@ class yc_targets_ietf_ped_catalog__ped_catalog_peds_targets(PybindBase):
       self._set()
 
   def _unset_name_ref(self):
-    self.__name_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="name-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__name_ref = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="name-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
 
   def _get_version_ref(self):
@@ -248,12 +248,12 @@ class yc_targets_ietf_ped_catalog__ped_catalog_peds_targets(PybindBase):
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="version-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[abv0-9\\-_.]+$', 'length': ['1..32']}), is_leaf=True, yang_name="version-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
           'error-string': """version_ref must be of a type compatible with string""",
           'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="version-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'generated-type': """YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[abv0-9\\-_.]+$', 'length': ['1..32']}), is_leaf=True, yang_name="version-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
         })
 
     self.__version_ref = t
@@ -261,7 +261,7 @@ class yc_targets_ietf_ped_catalog__ped_catalog_peds_targets(PybindBase):
       self._set()
 
   def _unset_version_ref(self):
-    self.__version_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="version-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__version_ref = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[abv0-9\\-_.]+$', 'length': ['1..32']}), is_leaf=True, yang_name="version-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
 
   def _get_description(self):
@@ -331,10 +331,10 @@ class yc_probes_ietf_ped_catalog__ped_catalog_peds_experiments_probes(PybindBase
     self._path_helper = False
 
     self._extmethods = False
-    self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__id = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     self.__container_image = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="container-image", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__connection_point_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="connection-point-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__address = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="address", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__connection_point_ref = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.:]+$', 'length': ['1..255']}), is_leaf=True, yang_name="connection-point-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__address = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])/(([0-9])|([1-2][0-9])|(3[0-2]))'}), is_leaf=True, yang_name="address", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='inet:ipv4-prefix', is_config=True)
 
     load = kwargs.pop("load", None)
     if args:
@@ -389,12 +389,12 @@ class yc_probes_ietf_ped_catalog__ped_catalog_peds_experiments_probes(PybindBase
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
           'error-string': """id must be of a type compatible with string""",
           'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'generated-type': """YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
         })
 
     self.__id = t
@@ -402,7 +402,7 @@ class yc_probes_ietf_ped_catalog__ped_catalog_peds_experiments_probes(PybindBase
       self._set()
 
   def _unset_id(self):
-    self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__id = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
 
   def _get_container_image(self):
@@ -446,7 +446,7 @@ class yc_probes_ietf_ped_catalog__ped_catalog_peds_experiments_probes(PybindBase
     """
     Getter method for connection_point_ref, mapped from YANG variable /ped_catalog/peds/experiments/probes/connection_point_ref (string)
 
-    YANG Description: Name of SUT connectin point to which this probe should be connected
+    YANG Description: Name of SUT connectin point to which this probe should be connected (same as specified in the SUT's VNF/NS descriptor)
     """
     return self.__connection_point_ref
       
@@ -458,17 +458,17 @@ class yc_probes_ietf_ped_catalog__ped_catalog_peds_experiments_probes(PybindBase
     method. Backends looking to populate this variable should
     do so via calling thisObj._set_connection_point_ref() directly.
 
-    YANG Description: Name of SUT connectin point to which this probe should be connected
+    YANG Description: Name of SUT connectin point to which this probe should be connected (same as specified in the SUT's VNF/NS descriptor)
     """
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="connection-point-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.:]+$', 'length': ['1..255']}), is_leaf=True, yang_name="connection-point-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
           'error-string': """connection_point_ref must be of a type compatible with string""",
           'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="connection-point-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'generated-type': """YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.:]+$', 'length': ['1..255']}), is_leaf=True, yang_name="connection-point-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
         })
 
     self.__connection_point_ref = t
@@ -476,12 +476,12 @@ class yc_probes_ietf_ped_catalog__ped_catalog_peds_experiments_probes(PybindBase
       self._set()
 
   def _unset_connection_point_ref(self):
-    self.__connection_point_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="connection-point-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__connection_point_ref = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.:]+$', 'length': ['1..255']}), is_leaf=True, yang_name="connection-point-ref", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
 
   def _get_address(self):
     """
-    Getter method for address, mapped from YANG variable /ped_catalog/peds/experiments/probes/address (string)
+    Getter method for address, mapped from YANG variable /ped_catalog/peds/experiments/probes/address (inet:ipv4-prefix)
 
     YANG Description: Static address the probe should get on its data iterface (CIDR)
     """
@@ -489,7 +489,7 @@ class yc_probes_ietf_ped_catalog__ped_catalog_peds_experiments_probes(PybindBase
       
   def _set_address(self, v, load=False):
     """
-    Setter method for address, mapped from YANG variable /ped_catalog/peds/experiments/probes/address (string)
+    Setter method for address, mapped from YANG variable /ped_catalog/peds/experiments/probes/address (inet:ipv4-prefix)
     If this variable is read-only (config: false) in the
     source YANG file, then _set_address is considered as a private
     method. Backends looking to populate this variable should
@@ -500,12 +500,12 @@ class yc_probes_ietf_ped_catalog__ped_catalog_peds_experiments_probes(PybindBase
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="address", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])/(([0-9])|([1-2][0-9])|(3[0-2]))'}), is_leaf=True, yang_name="address", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='inet:ipv4-prefix', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
-          'error-string': """address must be of a type compatible with string""",
-          'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="address", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'error-string': """address must be of a type compatible with inet:ipv4-prefix""",
+          'defined-type': "inet:ipv4-prefix",
+          'generated-type': """YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])/(([0-9])|([1-2][0-9])|(3[0-2]))'}), is_leaf=True, yang_name="address", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='inet:ipv4-prefix', is_config=True)""",
         })
 
     self.__address = t
@@ -513,7 +513,7 @@ class yc_probes_ietf_ped_catalog__ped_catalog_peds_experiments_probes(PybindBase
       self._set()
 
   def _unset_address(self):
-    self.__address = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="address", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__address = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '(([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])/(([0-9])|([1-2][0-9])|(3[0-2]))'}), is_leaf=True, yang_name="address", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='inet:ipv4-prefix', is_config=True)
 
   id = __builtin__.property(_get_id, _set_id)
   container_image = __builtin__.property(_get_container_image, _set_container_image)
@@ -544,9 +544,9 @@ class yc_vnf_ref_ietf_ped_catalog__ped_catalog_peds_experiments_parameters_vnf_r
     self._path_helper = False
 
     self._extmethods = False
-    self.__vendor_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vendor-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__name_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="name-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__version_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="version-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__vendor_ref = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="vendor-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__name_ref = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="name-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__version_ref = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[abv0-9\\-_.]+$', 'length': ['1..32']}), is_leaf=True, yang_name="version-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
     load = kwargs.pop("load", None)
     if args:
@@ -596,12 +596,12 @@ class yc_vnf_ref_ietf_ped_catalog__ped_catalog_peds_experiments_parameters_vnf_r
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="vendor-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="vendor-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
           'error-string': """vendor_ref must be of a type compatible with string""",
           'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vendor-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'generated-type': """YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="vendor-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
         })
 
     self.__vendor_ref = t
@@ -609,7 +609,7 @@ class yc_vnf_ref_ietf_ped_catalog__ped_catalog_peds_experiments_parameters_vnf_r
       self._set()
 
   def _unset_vendor_ref(self):
-    self.__vendor_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vendor-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__vendor_ref = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="vendor-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
 
   def _get_name_ref(self):
@@ -633,12 +633,12 @@ class yc_vnf_ref_ietf_ped_catalog__ped_catalog_peds_experiments_parameters_vnf_r
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="name-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="name-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
           'error-string': """name_ref must be of a type compatible with string""",
           'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="name-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'generated-type': """YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="name-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
         })
 
     self.__name_ref = t
@@ -646,7 +646,7 @@ class yc_vnf_ref_ietf_ped_catalog__ped_catalog_peds_experiments_parameters_vnf_r
       self._set()
 
   def _unset_name_ref(self):
-    self.__name_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="name-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__name_ref = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="name-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
 
   def _get_version_ref(self):
@@ -670,12 +670,12 @@ class yc_vnf_ref_ietf_ped_catalog__ped_catalog_peds_experiments_parameters_vnf_r
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="version-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[abv0-9\\-_.]+$', 'length': ['1..32']}), is_leaf=True, yang_name="version-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
           'error-string': """version_ref must be of a type compatible with string""",
           'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="version-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'generated-type': """YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[abv0-9\\-_.]+$', 'length': ['1..32']}), is_leaf=True, yang_name="version-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
         })
 
     self.__version_ref = t
@@ -683,7 +683,7 @@ class yc_vnf_ref_ietf_ped_catalog__ped_catalog_peds_experiments_parameters_vnf_r
       self._set()
 
   def _unset_version_ref(self):
-    self.__version_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="version-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__version_ref = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[abv0-9\\-_.]+$', 'length': ['1..32']}), is_leaf=True, yang_name="version-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
   vendor_ref = __builtin__.property(_get_vendor_ref, _set_vendor_ref)
   name_ref = __builtin__.property(_get_name_ref, _set_name_ref)
@@ -2455,7 +2455,7 @@ class yc_parameters_ietf_ped_catalog__ped_catalog_peds_experiments_parameters(Py
     self._path_helper = False
 
     self._extmethods = False
-    self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__id = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     self.__vnf_ref = YANGDynClass(base=yc_vnf_ref_ietf_ped_catalog__ped_catalog_peds_experiments_parameters_vnf_ref, is_container='container', yang_name="vnf-ref", parent=self, choice=('node-ref', 'vnf'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, extensions=None, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='container', is_config=True)
     self.__probe_ref = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="probe-ref", parent=self, choice=('node-ref', 'probe'), path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='leafref', is_config=True)
     self.__cmd_start = YANGDynClass(base=yc_cmd_start_ietf_ped_catalog__ped_catalog_peds_experiments_parameters_cmd_start, is_container='container', yang_name="cmd-start", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, extensions=None, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='container', is_config=True)
@@ -2519,12 +2519,12 @@ class yc_parameters_ietf_ped_catalog__ped_catalog_peds_experiments_parameters(Py
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
           'error-string': """id must be of a type compatible with string""",
           'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'generated-type': """YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
         })
 
     self.__id = t
@@ -2532,7 +2532,7 @@ class yc_parameters_ietf_ped_catalog__ped_catalog_peds_experiments_parameters(Py
       self._set()
 
   def _unset_id(self):
-    self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__id = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
 
   def _get_vnf_ref(self):
@@ -2902,7 +2902,7 @@ class yc_experiments_ietf_ped_catalog__ped_catalog_peds_experiments(PybindBase):
     self._path_helper = False
 
     self._extmethods = False
-    self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__id = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     self.__repetitions = YANGDynClass(base=RestrictedClassType(base_type=long, restriction_dict={'range':  ['0..18446744073709551615']}, int_size=64), is_leaf=True, yang_name="repetitions", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='uint64', is_config=True)
     self.__time_limit = YANGDynClass(base=RestrictedClassType(base_type=long, restriction_dict={'range':  ['0..18446744073709551615']}, int_size=64), default=RestrictedClassType(base_type=long, restriction_dict={'range':  ['0..18446744073709551615']}, int_size=64)(0), is_leaf=True, yang_name="time-limit", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='time-in-seconds', is_config=True)
     self.__probes = YANGDynClass(base=YANGListType("id",yc_probes_ietf_ped_catalog__ped_catalog_peds_experiments_probes, yang_name="probes", parent=self, is_container='list', user_ordered=False, path_helper=self._path_helper, yang_keys='id', extensions=None), is_container='list', yang_name="probes", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, extensions=None, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='list', is_config=True)
@@ -2961,12 +2961,12 @@ class yc_experiments_ietf_ped_catalog__ped_catalog_peds_experiments(PybindBase):
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
           'error-string': """id must be of a type compatible with string""",
           'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'generated-type': """YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
         })
 
     self.__id = t
@@ -2974,7 +2974,7 @@ class yc_experiments_ietf_ped_catalog__ped_catalog_peds_experiments(PybindBase):
       self._set()
 
   def _unset_id(self):
-    self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__id = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
 
   def _get_repetitions(self):
@@ -3154,11 +3154,11 @@ class yc_peds_ietf_ped_catalog__ped_catalog_peds(PybindBase):
     self._path_helper = False
 
     self._extmethods = False
-    self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__id = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     self.__descriptor_version = YANGDynClass(base=RestrictedPrecisionDecimalType(precision=1), default=Decimal(1.0), is_leaf=True, yang_name="descriptor-version", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='decimal64', is_config=True)
-    self.__vendor = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vendor", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__name = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="name", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
-    self.__version = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="version", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__vendor = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="vendor", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__name = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="name", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__version = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[abv0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="version", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     self.__description = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="description", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     self.__author = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="author", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     self.__targets = YANGDynClass(base=YANGListType("id",yc_targets_ietf_ped_catalog__ped_catalog_peds_targets, yang_name="targets", parent=self, is_container='list', user_ordered=False, path_helper=self._path_helper, yang_keys='id', extensions=None), is_container='list', yang_name="targets", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, extensions=None, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='list', is_config=True)
@@ -3217,12 +3217,12 @@ class yc_peds_ietf_ped_catalog__ped_catalog_peds(PybindBase):
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
           'error-string': """id must be of a type compatible with string""",
           'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'generated-type': """YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
         })
 
     self.__id = t
@@ -3230,7 +3230,7 @@ class yc_peds_ietf_ped_catalog__ped_catalog_peds(PybindBase):
       self._set()
 
   def _unset_id(self):
-    self.__id = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__id = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="id", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, is_keyval=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
 
   def _get_descriptor_version(self):
@@ -3291,12 +3291,12 @@ class yc_peds_ietf_ped_catalog__ped_catalog_peds(PybindBase):
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="vendor", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="vendor", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
           'error-string': """vendor must be of a type compatible with string""",
           'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vendor", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'generated-type': """YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="vendor", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
         })
 
     self.__vendor = t
@@ -3304,7 +3304,7 @@ class yc_peds_ietf_ped_catalog__ped_catalog_peds(PybindBase):
       self._set()
 
   def _unset_vendor(self):
-    self.__vendor = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="vendor", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__vendor = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="vendor", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
 
   def _get_name(self):
@@ -3328,12 +3328,12 @@ class yc_peds_ietf_ped_catalog__ped_catalog_peds(PybindBase):
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="name", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="name", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
           'error-string': """name must be of a type compatible with string""",
           'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="name", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'generated-type': """YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="name", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
         })
 
     self.__name = t
@@ -3341,7 +3341,7 @@ class yc_peds_ietf_ped_catalog__ped_catalog_peds(PybindBase):
       self._set()
 
   def _unset_name(self):
-    self.__name = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="name", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__name = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[a-z0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="name", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
 
   def _get_version(self):
@@ -3365,12 +3365,12 @@ class yc_peds_ietf_ped_catalog__ped_catalog_peds(PybindBase):
     if hasattr(v, "_utype"):
       v = v._utype(v)
     try:
-      t = YANGDynClass(v,base=six.text_type, is_leaf=True, yang_name="version", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+      t = YANGDynClass(v,base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[abv0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="version", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
     except (TypeError, ValueError):
       raise ValueError({
           'error-string': """version must be of a type compatible with string""",
           'defined-type': "string",
-          'generated-type': """YANGDynClass(base=six.text_type, is_leaf=True, yang_name="version", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
+          'generated-type': """YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[abv0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="version", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)""",
         })
 
     self.__version = t
@@ -3378,7 +3378,7 @@ class yc_peds_ietf_ped_catalog__ped_catalog_peds(PybindBase):
       self._set()
 
   def _unset_version(self):
-    self.__version = YANGDynClass(base=six.text_type, is_leaf=True, yang_name="version", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
+    self.__version = YANGDynClass(base=RestrictedClassType(base_type=six.text_type, restriction_dict={'pattern': '^[abv0-9\\-_.]+$', 'length': ['1..255']}), is_leaf=True, yang_name="version", parent=self, path_helper=self._path_helper, extmethods=self._extmethods, register_paths=True, namespace='urn:ietf:params:xml:ns:yang:ietf-ped-catalog', defining_module='ietf-ped-catalog', yang_type='string', is_config=True)
 
 
   def _get_description(self):
@@ -3545,7 +3545,11 @@ class yc_ped_catalog_ietf_ped_catalog__ped_catalog(PybindBase):
   the container is represented as a class variable - with a specific
   YANG type.
 
-  YANG Description: Performance Experiment Descriptor (PED)
+  YANG Description: Performance Experiment Descriptor (PED) catalog.
+A collection of PEDs that can be empty.
+(This construct is needed to be aligned with RFC6020.
+Putting the PED description directly into the model wouldn't
+work, since a PED cannot be empty).
   """
   __slots__ = ('_path_helper', '_extmethods', '__peds',)
 
@@ -3682,7 +3686,11 @@ class ietf_ped_catalog(PybindBase):
     """
     Getter method for ped_catalog, mapped from YANG variable /ped_catalog (container)
 
-    YANG Description: Performance Experiment Descriptor (PED)
+    YANG Description: Performance Experiment Descriptor (PED) catalog.
+A collection of PEDs that can be empty.
+(This construct is needed to be aligned with RFC6020.
+Putting the PED description directly into the model wouldn't
+work, since a PED cannot be empty).
     """
     return self.__ped_catalog
       
@@ -3694,7 +3702,11 @@ class ietf_ped_catalog(PybindBase):
     method. Backends looking to populate this variable should
     do so via calling thisObj._set_ped_catalog() directly.
 
-    YANG Description: Performance Experiment Descriptor (PED)
+    YANG Description: Performance Experiment Descriptor (PED) catalog.
+A collection of PEDs that can be empty.
+(This construct is needed to be aligned with RFC6020.
+Putting the PED description directly into the model wouldn't
+work, since a PED cannot be empty).
     """
     if hasattr(v, "_utype"):
       v = v._utype(v)

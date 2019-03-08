@@ -30,11 +30,18 @@ module ietf-ped-catalog
 {
   namespace "urn:ietf:params:xml:ns:yang:ietf-ped-catalog";
   prefix "pe";
+  // Additional types (see RFC6021)
+  //import "ietf-yang-types" {
+  //  prefix "ietf";
+  //}
+  import "ietf-inet-types" {
+    prefix "inet";
+  }
   organization "Paderborn University";
   contact "Manuel Peuster <manuel@peuster.de>";
   description "Performance Experiment Descriptor (PED) model";
 
-  revision 2019-02-21 {
+  revision 2019-03-08 {
     description
       "Initial revision. This YANG file defines
        the Performance Experiment Descriptor (PED)";
@@ -54,17 +61,26 @@ module ietf-ped-catalog
   grouping vendor-name-version-id-ref {
     description "Reference (vendor.name.version triple) to another artefact/object.";
     leaf vendor-ref {
-      type string;
+      type string{
+        length "1..255";
+        pattern "^[a-z0-9\\-_.]+$";
+      }
       mandatory true;
       description "Vendor part of the reference";
     }
     leaf name-ref {
-      type string;
+      type string{
+        length "1..255";
+        pattern "^[a-z0-9\\-_.]+$";
+      }
       mandatory true;
       description "Name part of the reference";
     }
     leaf version-ref {
-      type string;
+      type string {
+        length "1..32";
+        pattern "^[abv0-9\\-_.]+$";
+      }
       mandatory true;
       description "Version part of the reference";
     }
@@ -161,23 +177,37 @@ module ietf-ped-catalog
   // PED-specific structures.
   // ---
   grouping sut-ref {
-    description "Reference to a SUT";
+    description "Reference to a system under test (SUT).
+    Reference is given by a vendor.name.version triple.
+    Additionally a URI can be specified, e.g., to point
+    to a VNF or network service package that contains
+    the SUT.";
     leaf id {
-      type string;
-        description "SUT identifier";
+      type string{
+        length "1..255";
+        pattern "^[a-z0-9\\-_.]+$";
+      }
+      mandatory true;
+      description "SUT identifier";
     }
     leaf uri {
-      type string;
-        description "Path/URL pointing to the SUT's location";
+      type inet:uri;
+      description "Path/URL pointing to the SUT's location";
     }
     uses vendor-name-version-id-ref;
     uses generic-description;
   }
 
   grouping probe {
-    description "Description of a probe";
+    description "Additional stimulation/measruement component
+    to test the SUT. References a container image which is used
+    to deploy and run the probe.";
     leaf id {
-      type string;
+      type string{
+        length "1..255";
+        pattern "^[a-z0-9\\-_.]+$";
+      }
+      mandatory true;
       description "Probe identifier";
     }
     leaf container-image {
@@ -186,11 +216,14 @@ module ietf-ped-catalog
       description "Name of the container image to be used for this probe";
     }
     leaf connection-point-ref {
-      type string;
-      description "Name of SUT connectin point to which this probe should be connected";
+      type string{
+        length "1..255";
+        pattern "^[a-z0-9\\-_.:]+$";
+      }
+      description "Name of SUT connectin point to which this probe should be connected (same as specified in the SUT's VNF/NS descriptor)";
     }
     leaf address {
-      type string;
+      type inet:ipv4-prefix;
       description "Static address the probe should get on its data iterface (CIDR)";
     }
   }
@@ -234,7 +267,11 @@ module ietf-ped-catalog
   grouping experiment {
     description "Definition of a single performance experiment";
     leaf id {
-      type string;
+      type string{
+        length "1..255";
+        pattern "^[a-z0-9\\-_.]+$";
+      }
+      mandatory true;
       description "Experiment identifier";
     }
     leaf repetitions {
@@ -254,7 +291,10 @@ module ietf-ped-catalog
       key "id";
       description "Parameters (e.g. configurations) tested during an experiment";
       leaf id {
-        type string;
+        type string{
+          length "1..255";
+          pattern "^[a-z0-9\\-_.]+$";
+        }
         description "Identifier";
       }
       choice node-ref {
@@ -285,7 +325,10 @@ module ietf-ped-catalog
     description
       "Performance Experiment Descriptor (PED)";
     leaf id {
-      type string;
+      type string{
+        length "1..255";
+        pattern "^[a-z0-9\\-_.]+$";
+      }
       description "PED identifier";
     }
     leaf descriptor-version {
@@ -296,17 +339,26 @@ module ietf-ped-catalog
       description "Version of the data model";
     }
     leaf vendor {
-      type string;
+      type string{
+        length "1..255";
+        pattern "^[a-z0-9\\-_.]+$";
+      }
       mandatory true;
       description "PED vendor";
     }
     leaf name {
-      type string;
+      type string{
+        length "1..255";
+        pattern "^[a-z0-9\\-_.]+$";
+      }
       mandatory true;
       description "PED name";
     }
     leaf version {
-      type string;
+      type string{
+        length "1..255";
+        pattern "^[abv0-9\\-_.]+$";
+      }
       mandatory true;
       description "PED version";
     }
@@ -329,9 +381,16 @@ module ietf-ped-catalog
     }
   }
 
+  // ---
+  // Main entrypoint of the model.
+  // ---
   container ped-catalog {
     description
-      "Performance Experiment Descriptor (PED)";
+      "Performance Experiment Descriptor (PED) catalog.
+      A collection of PEDs that can be empty.
+      (This construct is needed to be aligned with RFC6020.
+      Putting the PED description directly into the model wouldn't
+      work, since a PED cannot be empty).";
     list peds {
       key "id";
       description "List of PEDs";  

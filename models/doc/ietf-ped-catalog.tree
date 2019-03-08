@@ -10,7 +10,7 @@ module: ietf-ped-catalog
         +--rw author?               string
         +--rw targets* [id]
         |  +--rw id             string
-        |  +--rw uri?           string
+        |  +--rw uri?           inet:uri
         |  +--rw vendor-ref     string
         |  +--rw name-ref       string
         |  +--rw version-ref    string
@@ -23,7 +23,7 @@ module: ietf-ped-catalog
            |  +--rw id                      string
            |  +--rw container-image         string
            |  +--rw connection-point-ref?   string
-           |  +--rw address?                string
+           |  +--rw address?                inet:ipv4-prefix
            +--rw parameters* [id]
               +--rw id                 string
               +--rw (node-ref)

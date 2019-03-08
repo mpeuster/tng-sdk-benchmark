@@ -193,7 +193,11 @@ function expandAllRows() {
                                 onclick="toggleRows(this);return false"
                                 class="folder">&nbsp;
                              </a>
-                             <abbr title="Performance Experiment Descriptor (PED)">ped-catalog</abbr>
+                             <abbr title="Performance Experiment Descriptor (PED) catalog.
+A collection of PEDs that can be empty.
+(This construct is needed to be aligned with RFC6020.
+Putting the PED description directly into the model wouldn't
+work, since a PED cannot be empty).">ped-catalog</abbr>
                           </div>
                        </td> 
 <td nowrap>container</td>
@@ -229,7 +233,7 @@ function expandAllRows() {
                        </td>
                        <td>leaf</td>
                        <td nowrap><abbr title="string
-">string</abbr></td>
+ {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}">string</abbr></td>
                        <td nowrap>config</td>
                        <td></td>
                        <td>current</td>
@@ -257,7 +261,7 @@ function expandAllRows() {
                        </td>
                        <td>leaf</td>
                        <td nowrap><abbr title="string
-">string</abbr></td>
+ {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}">string</abbr></td>
                        <td nowrap>config</td>
                        <td></td>
                        <td>current</td>
@@ -271,7 +275,7 @@ function expandAllRows() {
                        </td>
                        <td>leaf</td>
                        <td nowrap><abbr title="string
-">string</abbr></td>
+ {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}">string</abbr></td>
                        <td nowrap>config</td>
                        <td></td>
                        <td>current</td>
@@ -285,7 +289,7 @@ function expandAllRows() {
                        </td>
                        <td>leaf</td>
                        <td nowrap><abbr title="string
-">string</abbr></td>
+ {length = 1..255} {pattern = ^[abv0-9\-_.]+$}">string</abbr></td>
                        <td nowrap>config</td>
                        <td></td>
                        <td>current</td>
@@ -344,7 +348,7 @@ function expandAllRows() {
                        </td>
                        <td>leaf</td>
                        <td nowrap><abbr title="string
-">string</abbr></td>
+ {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}">string</abbr></td>
                        <td nowrap>config</td>
                        <td></td>
                        <td>current</td>
@@ -357,8 +361,9 @@ function expandAllRows() {
                           </div>
                        </td>
                        <td>leaf</td>
-                       <td nowrap><abbr title="string
-">string</abbr></td>
+                       <td nowrap><abbr title="inet:uri
+string
+">inet:uri</abbr></td>
                        <td nowrap>config</td>
                        <td>?</td>
                        <td>current</td>
@@ -372,7 +377,7 @@ function expandAllRows() {
                        </td>
                        <td>leaf</td>
                        <td nowrap><abbr title="string
-">string</abbr></td>
+ {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}">string</abbr></td>
                        <td nowrap>config</td>
                        <td></td>
                        <td>current</td>
@@ -386,7 +391,7 @@ function expandAllRows() {
                        </td>
                        <td>leaf</td>
                        <td nowrap><abbr title="string
-">string</abbr></td>
+ {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}">string</abbr></td>
                        <td nowrap>config</td>
                        <td></td>
                        <td>current</td>
@@ -400,7 +405,7 @@ function expandAllRows() {
                        </td>
                        <td>leaf</td>
                        <td nowrap><abbr title="string
-">string</abbr></td>
+ {length = 1..32} {pattern = ^[abv0-9\-_.]+$}">string</abbr></td>
                        <td nowrap>config</td>
                        <td></td>
                        <td>current</td>
@@ -445,7 +450,7 @@ function expandAllRows() {
                        </td>
                        <td>leaf</td>
                        <td nowrap><abbr title="string
-">string</abbr></td>
+ {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}">string</abbr></td>
                        <td nowrap>config</td>
                        <td></td>
                        <td>current</td>
@@ -505,7 +510,7 @@ uint64
                        </td>
                        <td>leaf</td>
                        <td nowrap><abbr title="string
-">string</abbr></td>
+ {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}">string</abbr></td>
                        <td nowrap>config</td>
                        <td></td>
                        <td>current</td>
@@ -528,12 +533,12 @@ uint64
                        <td nowrap>
                           <div id=9999 class=tier6>
                              <a class="leaf">&nbsp;</a>
-                             <abbr title="Name of SUT connectin point to which this probe should be connected"> <em> connection-point-ref </em></abbr>
+                             <abbr title="Name of SUT connectin point to which this probe should be connected (same as specified in the SUT's VNF/NS descriptor)"> <em> connection-point-ref </em></abbr>
                           </div>
                        </td>
                        <td>leaf</td>
                        <td nowrap><abbr title="string
-">string</abbr></td>
+ {length = 1..255} {pattern = ^[a-z0-9\-_.:]+$}">string</abbr></td>
                        <td nowrap>config</td>
                        <td>?</td>
                        <td>current</td>
@@ -546,8 +551,9 @@ uint64
                           </div>
                        </td>
                        <td>leaf</td>
-                       <td nowrap><abbr title="string
-">string</abbr></td>
+                       <td nowrap><abbr title="inet:ipv4-prefix
+string
+ {pattern = (([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.){3}([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])/(([0-9])|([1-2][0-9])|(3[0-2]))}">inet:ipv4-prefix</abbr></td>
                        <td nowrap>config</td>
                        <td>?</td>
                        <td>current</td>
@@ -578,7 +584,7 @@ uint64
                        </td>
                        <td>leaf</td>
                        <td nowrap><abbr title="string
-">string</abbr></td>
+ {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}">string</abbr></td>
                        <td nowrap>config</td>
                        <td></td>
                        <td>current</td>
@@ -643,7 +649,7 @@ uint64
                        </td>
                        <td>leaf</td>
                        <td nowrap><abbr title="string
-">string</abbr></td>
+ {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}">string</abbr></td>
                        <td nowrap>config</td>
                        <td></td>
                        <td>current</td>
@@ -657,7 +663,7 @@ uint64
                        </td>
                        <td>leaf</td>
                        <td nowrap><abbr title="string
-">string</abbr></td>
+ {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}">string</abbr></td>
                        <td nowrap>config</td>
                        <td></td>
                        <td>current</td>
@@ -671,7 +677,7 @@ uint64
                        </td>
                        <td>leaf</td>
                        <td nowrap><abbr title="string
-">string</abbr></td>
+ {length = 1..32} {pattern = ^[abv0-9\-_.]+$}">string</abbr></td>
                        <td nowrap>config</td>
                        <td></td>
                        <td>current</td>

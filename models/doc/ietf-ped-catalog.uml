@@ -12,15 +12,18 @@ hide <<leafref>> stereotype
 hide <<leafref>> circle
 page 1x1 
 Title ietf-ped-catalog 
-note top of pe_ietf_ped_catalog : <b>Namespace: </b> urn:ietf:params:xml:ns:yang:ietf-ped-catalog \n<b>Prefix: </b> pe \n<b>Organization : </b>\nPaderborn University \n<b>Contact : </b>\nManuel Peuster <manuel@peuster.de> \n<b>Revision : </b> 2019-02-21 \n
+package "inet:ietf-inet-types" as inet_ietf_inet_types { 
+} 
+note top of pe_ietf_ped_catalog : <b>Namespace: </b> urn:ietf:params:xml:ns:yang:ietf-ped-catalog \n<b>Prefix: </b> pe \n<b>Organization : </b>\nPaderborn University \n<b>Contact : </b>\nManuel Peuster <manuel@peuster.de> \n<b>Revision : </b> 2019-03-08 \n
 package "pe:ietf-ped-catalog" as pe_ietf_ped_catalog { 
+inet_ietf_inet_types +-- pe_ietf_ped_catalog
 class "ietf-ped-catalog" as ietf_ped_catalog << (M, #33CCFF) module>> 
 class "time-in-seconds" as time_in_seconds << (T, YellowGreen) typedef>>
 time_in_seconds : uint64
 class "vendor-name-version-id-ref" as ietf_ped_catalog_I_vendor_name_version_id_ref_grouping <<(G,Lime) grouping>> 
-ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : vendor-ref : string   {mandatory}
-ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : name-ref : string   {mandatory}
-ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : version-ref : string   {mandatory}
+ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : vendor-ref : string {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}   {mandatory}
+ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : name-ref : string {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}   {mandatory}
+ietf_ped_catalog_I_vendor_name_version_id_ref_grouping : version-ref : string {length = 1..32} {pattern = ^[abv0-9\-_.]+$}   {mandatory}
 class "generic-description" as ietf_ped_catalog_I_generic_description_grouping <<(G,Lime) grouping>> 
 ietf_ped_catalog_I_generic_description_grouping : description : string  
 class "expandable-parameter-float" as ietf_ped_catalog_I_expandable_parameter_float_grouping <<(G,Lime) grouping>> 
@@ -49,15 +52,15 @@ class "vector" as ietf_ped_catalog_I_expandable_parameter_string_I_parameter_I_v
 ietf_ped_catalog_I_expandable_parameter_string_I_parameter .. ietf_ped_catalog_I_expandable_parameter_string_I_parameter_I_vector_case  : choice parameter
 ietf_ped_catalog_I_expandable_parameter_string_I_parameter_I_vector_case : vector []: string 
 class "sut-ref" as ietf_ped_catalog_I_sut_ref_grouping <<(G,Lime) grouping>> 
-ietf_ped_catalog_I_sut_ref_grouping : id : string  
-ietf_ped_catalog_I_sut_ref_grouping : uri : string  
+ietf_ped_catalog_I_sut_ref_grouping : id : string {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}   {mandatory}
+ietf_ped_catalog_I_sut_ref_grouping : uri : inet:uri  
 ietf_ped_catalog_I_sut_ref_grouping : vendor-name-version-id-ref {uses} 
 ietf_ped_catalog_I_sut_ref_grouping : generic-description {uses} 
 class "probe" as ietf_ped_catalog_I_probe_grouping <<(G,Lime) grouping>> 
-ietf_ped_catalog_I_probe_grouping : id : string  
+ietf_ped_catalog_I_probe_grouping : id : string {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}   {mandatory}
 ietf_ped_catalog_I_probe_grouping : container-image : string   {mandatory}
-ietf_ped_catalog_I_probe_grouping : connection-point-ref : string  
-ietf_ped_catalog_I_probe_grouping : address : string  
+ietf_ped_catalog_I_probe_grouping : connection-point-ref : string {length = 1..255} {pattern = ^[a-z0-9\-_.:]+$}  
+ietf_ped_catalog_I_probe_grouping : address : inet:ipv4-prefix  
 class "node-command-parameter" as ietf_ped_catalog_I_node_command_parameter_grouping <<(G,Lime) grouping>> 
 class "cmd-start" as  ietf_ped_catalog_I_node_command_parameter_I_cmd_start <<container>> 
 ietf_ped_catalog_I_node_command_parameter_grouping *-- "1" ietf_ped_catalog_I_node_command_parameter_I_cmd_start 
@@ -82,7 +85,7 @@ class "io-bw" as  ietf_ped_catalog_I_node_resource_parameter_I_io_bw <<container
 ietf_ped_catalog_I_node_resource_parameter_grouping *-- "1" ietf_ped_catalog_I_node_resource_parameter_I_io_bw 
 ietf_ped_catalog_I_node_resource_parameter_I_io_bw : expandable-parameter-float {uses} 
 class "experiment" as ietf_ped_catalog_I_experiment_grouping <<(G,Lime) grouping>> 
-ietf_ped_catalog_I_experiment_grouping : id : string  
+ietf_ped_catalog_I_experiment_grouping : id : string {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}   {mandatory}
 ietf_ped_catalog_I_experiment_grouping : repetitions : uint64  
 ietf_ped_catalog_I_experiment_grouping : time-limit : time-in-seconds  
 class "probes" as ietf_ped_catalog_I_experiment_I_probes << (L, #FF7700) list>> 
@@ -90,7 +93,7 @@ ietf_ped_catalog_I_experiment_grouping *-- "0..N" ietf_ped_catalog_I_experiment_
 ietf_ped_catalog_I_experiment_I_probes : probe {uses} 
 class "parameters" as ietf_ped_catalog_I_experiment_I_parameters << (L, #FF7700) list>> 
 ietf_ped_catalog_I_experiment_grouping *-- "0..N" ietf_ped_catalog_I_experiment_I_parameters 
-ietf_ped_catalog_I_experiment_I_parameters : +id : string  {key} 
+ietf_ped_catalog_I_experiment_I_parameters : +id : string {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}  {key} 
 class "node-ref" as ietf_ped_catalog_I_experiment_I_parameters_I_node_ref <<choice>> 
 ietf_ped_catalog_I_experiment_I_parameters .. ietf_ped_catalog_I_experiment_I_parameters_I_node_ref : choice 
 class "vnf" as ietf_ped_catalog_I_experiment_I_parameters_I_node_ref_I_vnf_case <<case>>
@@ -104,11 +107,11 @@ ietf_ped_catalog_I_experiment_I_parameters_I_node_ref_I_probe_case : probe-ref :
 ietf_ped_catalog_I_experiment_I_parameters : node-command-parameter {uses} 
 ietf_ped_catalog_I_experiment_I_parameters : node-resource-parameter {uses} 
 class "ped" as ietf_ped_catalog_I_ped_grouping <<(G,Lime) grouping>> 
-ietf_ped_catalog_I_ped_grouping : +id : string  {key} 
+ietf_ped_catalog_I_ped_grouping : +id : string {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}  {key} 
 ietf_ped_catalog_I_ped_grouping : descriptor-version : decimal64   = 1.0 
-ietf_ped_catalog_I_ped_grouping : vendor : string   {mandatory}
-ietf_ped_catalog_I_ped_grouping : name : string   {mandatory}
-ietf_ped_catalog_I_ped_grouping : version : string   {mandatory}
+ietf_ped_catalog_I_ped_grouping : vendor : string {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}   {mandatory}
+ietf_ped_catalog_I_ped_grouping : name : string {length = 1..255} {pattern = ^[a-z0-9\-_.]+$}   {mandatory}
+ietf_ped_catalog_I_ped_grouping : version : string {length = 1..255} {pattern = ^[abv0-9\-_.]+$}   {mandatory}
 ietf_ped_catalog_I_ped_grouping : generic-description {uses} 
 ietf_ped_catalog_I_ped_grouping : author : string  
 class "targets" as ietf_ped_catalog_I_ped_I_targets << (L, #FF7700) list>> 
@@ -142,6 +145,6 @@ ietf_ped_catalog_I_ped_I_targets --> ietf_ped_catalog_I_sut_ref_grouping : uses
 ietf_ped_catalog_I_ped_I_experiments --> ietf_ped_catalog_I_experiment_grouping : uses 
 ietf_ped_catalog_I_ped_catalog_I_peds --> ietf_ped_catalog_I_ped_grouping : uses 
 center footer
- <size:20> UML Generated : 2019-03-07 16:30 </size>
+ <size:20> UML Generated : 2019-03-08 14:07 </size>
  endfooter 
 @enduml 
